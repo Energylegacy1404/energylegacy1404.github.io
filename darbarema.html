@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آتش در سکوت</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/darbarema.css" rel="stylesheet">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <style>
+        .scroll-buttons {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 9999;
+          }
+          
+          .scroll-buttons img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+          }
+          
+          .scroll-buttons img:hover {
+            opacity: 1;
+            transform: scale(1.15);
+          }
+          li{
+            margin-left: 30px;
+          }
+    </style>
+</head>
+<body>
+
+    <!-- هدر سایت (همان هدر اصلی) -->
+    <!-- کد هدر شما اینجا قرار می‌گیرد -->
+
+    <header class="container-fluid position-relative" id="head">
+        <div class="pattern-header w-100 position-absolute top-0 end-0"></div>
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#navbarSupportedContent" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse order-lg-1 order-2">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">سوخت های فسیلی</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index -chand-dahgihge-ba-zamin.html">چند دقیقه با زمین</a>
+                        </li>
+                     
+                        <li class="nav-item">
+                            <a class="nav-link" aria-disabled="true" href="index -rahkar.html">راهکار ها</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="darbarema.html">درباره ما</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="navbar-brand order-1 order-lg-2" href="/">
+                    <img src="assets/img/logo-final-1.png" class="my-img">
+                    <!-- <h5>هنرستان  فرهنگیان</h5> -->
+                </a>
+            </div>
+        </nav>
+        <div class="container position-relative">
+            
+            <div class="row">
+                <div class="col-12 text-center d-flex justify-content-center align-items-center flex-column"
+                    id="content-header">
+                    <h1 class="text-white w-50 mx-auto title-border" id="title-head">درباره ما</h1>
+                    <p class="text-secondary w-50 mx-auto mt-5">
+                        پروژه دانش آموزی درباره سوخت های فسیلی و آینده انرژی جهان
+                    </p>
+                    <p class="text-secondary w-50 mx-auto mt-5">
+                        کُلُوا وَ اشْرَبُوا وَ لا تُسْرِفُوا إِنّهُ لا یُحِبّ الْمُسْرِفینَ (سوره اعراف / آیه 31 )
+                        <br>
+                        بخورید و بیاشامید ولی اسراف نکنید زیرا خداوند مسرفان را دوست ندارد.
+                        <br>
+                        <br>
+                        با اسراف، سرمایه محبت الهی که نعمتی بزرگ است، از دست انسان می‌رود. و می‌شود گفت هر کس این نعمت
+                        را از دست دهد، گرفتار عذاب می‌شود.
+                    </p>
+                    <div id="test" class="text-white">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarSupportedContent"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header justify-content-between">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">منو</h5>
+                        <button type="button" class="btn-close ms-0" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">سوخت های فسیلی</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index -chand-dahgihge-ba-zamin.html">چند دقیقه با زمین</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index -rahkar.html">   راهکار ها</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="darbarema.html">  درباره ما </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+    <!-- هدر مخصوص صفحه درباره ما -->
+    
+
+    <!-- معرفی تیم -->
+    <section class="container">
+        <div class="row justify-content-center">
+            <!-- کارت آندیا -->
+            <div class="col-md-5 mt-5">
+                <div class="team-card text-center p-4">
+                    <!-- یگانه این عکس رو آماده کنه -->
+                    <h3 class="mt-3">آندیا شیردلان</h3>
+                    <div class="role-badge">ما باهم کد زدیم ، طراحی کردیم و این سایت آموزشی رو ساختیم.</div>
+                    <p class="text-muted">دانش‌آموز پایه یازدهم - رشته شبکه و نرم‌افزار</p>
+                    <p>مسئولیت‌ها: طراحی ساختار سایت، کدنویسی HTML/CSS</p>
+                </div>
+            </div>
+
+            <!-- کارت یگانه -->
+            <div class="col-md-5 mt-5">
+                <div class="team-card text-center p-4">
+                    <!-- یگانه این عکس رو آماده کنه -->
+                    <h3 class="mt-3">یگانه رجایی</h3>
+                    <div class="role-badge">ما باهم کد زدیم ، طراحی کردیم و این سایت آموزشی رو ساختیم.</div>
+                    <p class="text-muted">دانش‌آموز پایه یازدهم - رشته شبکه و نرم‌افزار</p>
+                    <p>مسئولیت‌ها: طراحی گرافیک، انتخاب و ویرایش تصاویر، تحقیق محتوایی</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- داستان پروژه -->
+    <section class="container">
+        <div class="project-story">
+            <h2 class="text-center mb-4"><i class="bi bi-book-half"></i> داستان این پروژه از کجا شروع شد؟</h2>
+            <div class="row">
+                <div class="col-md-10">
+                    <p>با پیشنها معلم برای شرکت در مسابقه ، موضوع سوخت های فسیلی را انتخاب کردیم و با تایید ایشان ، 
+                        کار ساخت این سایت آموزشی را آغاز کردیم. 
+                        این پروژه حاصل علاقه ما به فناوری و نگرانیمان برای آینده محیط زیست است.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container">
+        <div class="project-story">
+            <h2 class="text-center mb-4"><i class="bi bi-book-half"></i> مسیر پروژه از ابتدا تا کنون</h2>
+            <div class="timeline">
+            <div class="timeline-item">
+                <h5>شروع با یک ایده</h5>
+                <p>انتخاب موضوع و برنامه ریزی اولیه</p>
+            </div>
+            <div class="timeline-item">
+                <h5>طراحی و نقشه کشی</h5>
+                <p>تعیین ظاهر و ساختار سایت</p>
+            </div>
+            <div class="timeline-item">
+                <h5>کد نویسی و ساخت سایت</h5>
+                <p>تبدیل ایده به کدهای واقعی</p>
+            </div>
+            <div class="timeline-item">
+                <h5>تکمیل و ارسال</h5>
+                <p>رفع خطاها و آماده برای مسابقه</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <div class="scroll-buttons">
+        <img src="assets/ico/arrow up.svg" alt="Scroll Up" id="scrollUp">
+        <img src="assets/ico/arrow down.svg" alt="Scroll Down" id="scrollDown">
+      </div>
+      
+    
+      <script>
+        document.getElementById("scrollUp").addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        });
+      
+        document.getElementById("scrollDown").addEventListener("click", function () {
+          window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth"
+          });
+        });
+      </script>
+
+    
+
+    <!-- فوتر (همان فوتر جدید) -->
+
+    <footer>
+                        <div class="container-fluid bg-dark w-100" id="service-footer">
+                            <div class="row">
+                                <div class="col-lg-2 px-0"></div>
+                </section>
+                <div class="col-lg-3"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="container-fluid bg-dark w-100 px-0 mt-5" id="service-footer">
+            <div class="row mx-0">
+                <div class="col-lg-1 mt-5 form-footer">
+                    
+                </div>
+                <div class="col-lg-8 pt-3 mt-5">
+                    <div class="row">
+                        <h2 class="text-bold text-white"> انرژی آینده</h2>
+                        <p class="text-white fs-6 mt-3">
+                            این وب‌ سایت یک پروژه آموزشی درباره سوخت‌ های فسیلی، چالش‌ ها و راهکار های انرژی‌ های پاک است
+                            که
+                            توسط آندیا شیردلان و یگانه رجایی ،
+                            <br>
+                            <br>
+                             دانش‌آموزان کلاس یازدهم رشته شبکه و نرم‌افزار، برای
+                            مسابقه طراحی سایت
+                            ایجاد شده است.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 p-3 ms-0">
+                            <div class="mt-3 d-flex align-items-center">
+                                <i class="fa-solid fa-envelope text-white fa-2x"></i>
+                                <p class="text-white me-3">نشانی : مشهد مقدس _ بلوار دانش آموز _ دانش آموز 5 </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 p-3 m-auto">
+                            <div class=" mt-3 d-flex align-items-center">
+                                <i class="fa-solid fa-mobile-screen text-white fa-2x "></i>
+                                <p class="text-white me-3 "> تلفن مدرسه : 36054014_051 </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>این پروژه تحت راهنمایی ارزشمند <strong>سرکار خانم کشمیری    </strong>،
+                                    دبیر محترم [ درس پیاده سازی سیستم های اطلاعاتی و طراحی وب ] 
+                                    <br>
+                                    طراحی و اجرا شده است.</p>
+                                <p>از زحمات و راهنمایی‌ های ایشان صمیمانه سپاسگزاریم.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-12 d-flex align-items-center flex-column ">
+                    <div class="border border-1 text-light mt-5 w-75">
+                    </div>
+                    <div class="copyright text-white mt-3">
+                        <p> مسابقه طراحی سایت : مصرف بهینه سوخت های فسیلی </p>
+                    </div>
+                </div>
+                <div class="col-lg-2 px-0"></div>
+            </div>
+        </div>
+    </footer>
+    <!-- کد فوتر شما اینجا قرار می‌گیرد -->
+
+
+    <script src="assets/bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
