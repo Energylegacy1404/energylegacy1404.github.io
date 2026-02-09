@@ -1,0 +1,158 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+@font-face {
+    font-family: "b-yekan";
+    src: url(../fonts/iranyekanwebregular.eot) format('eot'),
+        url(../fonts/iranyekanwebregular.ttf) format('ttf'),
+        url(../fonts/iranyekanwebregular.woff) format('woff');
+}
+
+@font-face {
+    font-family: "b-yekan-bold";
+    src: url(../fonts/iranyekanwebbold.eot) format('eot'),
+        url(../fonts/iranyekanwebbold.ttf) format('ttf'),
+        url(../fonts/iranyekanwebbold.woff) format('woff');
+}
+
+body {
+    direction: rtl;
+    font-family: "b-yekan";
+    margin: 0px;
+    width: 100%;
+}
+
+.text-bold {
+    font-family: "b-yekan-bold";
+    font-weight: bold;
+}
+
+header {
+    background: url(../img/zamin\ header.jpg) no-repeat center top;
+    background-size: cover;
+    height:700px;
+}
+
+.pattern-header {
+    height: 700px;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+#content-header {
+    height: 500px;
+}
+.my-img{
+  width: 60px;
+  height: 60px;
+ }
+
+/* واکنش‌گرایی (موبایل) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p, .intro p {
+        font-size: 1rem;
+    }
+    .intro h2, .cards h2, .cta h2 {
+        font-size: 1.8rem;
+    }
+    .card {
+        max-width: 100%;
+    }
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+        /* .about-header {
+            background: linear-gradient(135deg, #1a2980, #26d0ce);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 50px;
+        } */
+        .team-card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #1a2980;
+            object-fit: cover;
+            margin: 20px auto;
+        }
+        .role-badge {
+            display: inline-block;
+            background: #26d0ce;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+        .timeline {
+            position: relative;
+            padding-right: 30px;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            right: 10px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #1a2980;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            right: -36px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #26d0ce;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #1a2980;
+        }
+        .project-story {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin: 40px 0;
+        }
+        .project-story{
+            background-color: #dee7f8;
+        }
+        .team-card{
+            background-color: rgb(245, 237, 220);
+        }
