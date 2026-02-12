@@ -1,0 +1,244 @@
+/* حالت پیشفرض روشن */
+body {
+  background-color: #ffffff;
+  color: #111111;
+  transition: all 0.3s ease;
+}
+
+h2 {
+  color: #222222;
+}
+
+.theme-dark {
+  background-color: #121212;
+  color: #a3c0d8; /* آبی نفتی کم شدت */
+}
+ body.dark-mode .custom-card p,
+         body.dark-mode .custom-card .container,
+         body.dark-mode .custom-card .card,
+         body.dark-mode .custom-card .custom-card
+         {
+            color:white !important;
+            background: #0f1115 no-repeat center top;
+         }  
+.theme-dark h2 {
+  color: #ffffff;
+}
+
+/* آیکون چراغ */
+.theme-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.theme-icon:hover {
+  transform: scale(1.2);
+}
+
+/* scroll-bottom عکس‌ها */
+.scroll-bottom img {
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+#text-body-secondary-id{
+  color: #6f7b87;
+}
+.theme-toggle {
+  width: 50px;      
+ 
+  object-fit: contain;
+}
+#scrollUp {
+  background-color: #6f7b87;
+  border-radius:10px;
+}
+#scrollDown{
+  border-radius:10px;
+  background-color: #6f7b87;
+}
+
+.custom-card{
+  background-color:#3c3c3c;
+}
+/* وقتی تم شب فعال شد */
+body.theme-dark .card {
+  background-color: #1e1e1e; /* تیره برای باکس */
+  color: #a3c0d8; /* متن آبی نفتی کم شدت */
+  transition: all 0.3s ease;
+  border-right:none;
+  
+}
+
+/* h2 داخل باکس هم سفید باشه */
+body.theme-dark .card h2 {
+  color: #ffffff;
+}
+
+/* اگر متن‌های داخل باکس هم p باشن */
+body.theme-dark .card p {
+  color: #ffffff;
+  
+}
+/* کارت‌های بوت‌استرپ در تم تیره */
+.dark-theme .card {
+  background-color: #121a1f !important; /* تیره */
+  color: #cfe8e6 !important; /* آبی نفتی خیلی ملایم */
+  border: 1px solid rgba(255,255,255,0.05);
+  
+}
+
+/* متن داخل کارت */
+.dark-theme .card p {
+  color: #cfe8e6 !important;
+}
+
+/* تیترها داخل کارت */
+.dark-theme .card h1,
+.dark-theme .card h2,
+.dark-theme .card h3,
+.dark-theme .card h4 {
+  color: #ffffff !important;
+}
+#text-body-secondary{
+  color: #7d7d7d;
+}
+
+/* تم تاریک */
+body.theme-dark {
+  background: #0f1115;
+  color: #9fb3c8; /* آبی نفتی خیلی ملایم */
+}
+
+/* تیترها در تم تاریک */
+body.theme-dark h1,
+body.theme-dark h2,
+body.theme-dark h3,
+body.theme-dark h4,
+body.theme-dark h5,
+body.theme-dark h6 {
+  color: #ffffff;
+}
+
+/* متن‌ها */
+body.theme-dark p,
+body.theme-dark span,
+body.theme-dark li,
+body.theme-dark label {
+  color: #9fb3c8;
+}
+
+
+/* لینک‌ها */
+body.theme-dark a {
+  color: #9fb3c8;
+}
+
+/* اینپوت‌ها / تکس‌باکس‌ها */
+body.theme-dark input,
+body.theme-dark textarea,
+body.theme-dark select {
+  background-color: #171b22 !important;
+  color: #9fb3c8 !important;
+  border: 1px solid #2a2f3a !important;
+}
+
+/* دکمه‌ها */
+body.theme-dark button {
+  background-color: #171b22;
+  color: #9fb3c8;
+  border: 1px solid #2a2f3a;
+}
+body.theme-dark .fossil-distribution-large{
+  background-color:#1e1e1e;
+  color: #a3c0d8;
+}
+
+/* چراغ */
+#theme-toggle {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.15);
+}
+body.theme-dark .card-img-top{
+  width:100%;
+  height: 50%;
+}
+body.theme-dark .card-content{
+  background-color: #1e1e1e;
+}
+body.theme-dark .energy-section{
+  background-color: #1e1e1e;
+}
+body.theme-dark .energy-card {
+  background-color:  #3a3a3a;
+}
+body.theme-dark .team-card{
+  background-color:  #3a3a3a;
+}
+
+body.theme-dark .role-badge{
+  color: #9fb3c8;
+  background-color: #162535;
+}
+body.theme-dark .project-story{
+  background-color: #1e1e1e;
+}
+body.theme-dark #card-kind-fossil{
+
+border: none;
+}
+body.theme-dark .card-img-top{
+  border: none;
+}
+body.theme-dark #card-body-id{
+  border: none;
+}
+
+body.theme-dark .map-button{
+  width:100px;
+  height:40px;
+  background-color: #000e60;
+  border: none;
+  border-radius:10px;
+}
+body.theme-dark .map-button a{
+  text-decoration: none;
+  color: #ffffff;
+}
+body.theme-dark .close-btn:hover{
+  background:#848484;
+  color: rgb(0, 0, 0);
+}
+body.theme-dark .prayer-popup::before {
+  border-bottom: 12px solid rgba(7, 0, 84, 0.98);
+
+}
+body.theme-dark .prayer-popup{
+  background-color: #000e60;
+  border: #001ec5;
+}
+body.theme-dark .popup-item{
+  background-color: #000000;
+  box-shadow: 0 3px 0 #6e6e6e, 0 6px 12px rgba(70, 90, 80, 0.04);
+  border: 1px solid #6b6b6b;
+}
+body.theme-dark .popup-city{
+  background-color: #000000;
+}
+body.theme-dark .popup-date{
+  background-color: #000000;
+}
+body.theme-dark .popup-item-time{
+  color: #75ffcd;
+}
+body.theme-dark .popup-item-name{
+  color: #75ffcd;
+}
