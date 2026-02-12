@@ -1,10 +1,12 @@
+
+
 const toggleBtn = document.getElementById('theme-toggle');
 const body = document.body;
 const scrollUpImg = document.getElementById('scrollup');
 const scrollDownImg = document.getElementById('scrolldown');
 
-const lightBulbOn = 'assets/img/4photoshop-ir-icon-lamp-rooz.png';
-const lightBulbOff = 'assets/img/4photoshop-ir-icon-lamp-shab.png';
+const lightBulbOn = 'assets/img/sun-64.png';
+const lightBulbOff = 'assets/img/moon-stars-64.png';
 
 
 /* خواندن تم ذخیره شده */
@@ -37,3 +39,4 @@ function applyTheme() {
         if (scrollDownImg) scrollDownImg.src = scrollDownLight;
     }
 }
+
