@@ -8,27 +8,42 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/theme.css" rel="stylesheet">
+    <link href="assets/css/oghat.css" rel="stylesheet">
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazirmatn/Vazirmatn.css" rel="stylesheet">
     <style>
         /* Reset و فونت */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tahoma', sans-serif; }
         body { background-color: #f5f5f5; line-height: 1.6; overflow-x: hidden;}
         @font-face {
             font-family: "b-yekan";
-            src: url(../fonts/iranyekanwebregular.eot) format('eot'),
-                url(../fonts/iranyekanwebregular.ttf) format('ttf'),
-                url(../fonts/iranyekanwebregular.woff) format('woff');
-                display: flex;
+            src: url(assets/fonts/iranyekanwebregular.eot) format('eot'),
+                url(assets/fonts/iranyekanwebregular.ttf) format('ttf'),
+                url(assets/fonts/iranyekanwebregular.woff) format('woff');
+         /*       display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
+                align-items: center;*/
         }
         
         @font-face {
             font-family: "b-yekan-bold";
-            src: url(../fonts/iranyekanwebbold.eot) format('eot'),
-                url(../fonts/iranyekanwebbold.ttf) format('ttf'),
-                url(../fonts/iranyekanwebbold.woff) format('woff');
-        }
+            src: url(assets/fonts/iranyekanwebbold.eot) format('eot'),
+                url(assets/fonts/iranyekanwebbold.ttf) format('ttf'),
+                url(assets/fonts/iranyekanwebbold.woff) format('woff');
+        } 
+
+
+body {
+    direction: rtl;
+    font-family: "b-yekan";
+    margin: 0px;
+    width: 100%;
+}
+        .text-bold {
+    font-family: "b-yekan-bold";
+    font-weight: bold;
+}
         /* باکس متن علمی */
         .text-box {
             max-width: 1000px;
@@ -320,6 +335,23 @@ flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.project-story {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin: 40px 0;
+        }
+        .project-story{
+            background-color: beige;
+            border: 1px #000 solid;
+        }
+        .team-card{
+            background-color: rgb(245, 237, 220);
+        }
+        #prayerButton{
+            background-color: #747474;
+        }
     </style>
 </head>
 
@@ -348,6 +380,49 @@ flex-direction: column;
                             <a class="nav-link" href="darbarema.html">درباره ما</a>
                         </li>
                     </ul>
+                </div>
+                                <!--  88888888888888888888888888888888888888888888888  aval dokme oghat   -->
+					<button class="prayer-button" id="prayerButton">
+						<span class="prayer-icon">🕋</span>
+						<!-- <span class="prayer-text">اوقات شرعی</span> -->
+						<span class="arrow-icon">▼</span>
+					</button>                   
+                    <!-- پاپ‌آپ اوقات شرعی - پیش‌فرض مشهد -->
+					<div class="prayer-popup" id="prayerPopup">
+						<div class="popup-header">
+							<div class="popup-title">
+								<span style="font-size:1.5rem;">🕋</span>
+								<h3>اوقات شرعی</h3>
+							</div>
+							<button class="close-btn" id="closePopupBtn">✕</button>
+						</div>
+
+						<!-- انتخاب شهر داخل پاپ‌آپ -->
+						<div class="popup-city">
+							<label for="popupCitySelect">📍 شهر:</label>
+							<select id="popupCitySelect">
+								<option value="mashhad" selected>مشهد</option>
+								<option value="tehran">تهران</option>
+								<option value="isfahan">اصفهان</option>
+								<option value="shiraz">شیراز</option>
+								<option value="tabriz">تبریز</option>
+								<option value="kerman">کرمان</option>
+								<option value="rasht">رشت</option>
+								<option value="yazd">یزد</option>
+							</select>
+						</div>
+
+						<!-- گرید اوقات شرعی -->
+						<div class="popup-grid" id="popupPrayerGrid"></div>
+
+						<!-- فوتر تاریخ -->
+						<div class="popup-footer" id="popupFooter"></div>
+					</div>
+                    
+   <!--  88888888888888888888888888888888888888888888888   akhar  dokme oghat  -->
+                <div>
+                    <!-- چراغ تم -->
+                    <img id="theme-toggle" src="assets/img/sun-64.png" alt="تم روشن" class="theme-icon">
                 </div>
                 <a class="navbar-brand order-1 order-lg-2" href="/">
                     <img src="assets/img/logo-final-1.png" class="my-img">
@@ -384,55 +459,53 @@ flex-direction: column;
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarSupportedContent"
                     aria-labelledby="offcanvasExampleLabel">
-                    <div class="offcanvas-header justify-content-between">
-                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">منو</h5>
-                        <button type="button" class="btn-close ms-0" data-bs-dismiss="offcanvas"
+         <div class="offcanvas-header justify-content-between">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">منو</h5>
+            <button type="button" class="btn-close ms-0" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="index.html">سوخت های فسیلی</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="index -chand-dahgihge-ba-zamin.html">چند دقیقه با زمین</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="index -rahkar.html">   راهکار ها</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="darbarema.html">  درباره ما </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+         </div>
+         <div class="offcanvas-body">
+			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link" aria-current="page" href="index.html">سوخت های فسیلی</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="index -chand-dahgihge-ba-zamin.html">چند دقیقه با زمین</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="index -rahkar.html">   راهکار ها</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="darbarema.html">  درباره ما </a>
+				</li>
+			 </ul>
+         </div>
+    </div>
                 <br>
 
 
-     <div class="container" id="services">
-                    <div class="row mt-5">
-                        <div class="col-12 text-center">
-                            <h2 class="title-border-min">آسیب‌های سوخت‌های فسیلی به زمین</h2>
-                        </div>
-                        <div class="container mt-5">
-                            <div class="card p-4 shadow-sm custom-card">
-
-                                 
-            <p>
-                سوخت‌های فسیلی، مانند نفت، گاز و زغال‌سنگ، میلیون‌ها سال پیش در دل زمین شکل گرفته‌اند و امروز یکی از منابع اصلی انرژی بشر هستند.
-                اما استخراج و مصرف این منابع محدود، اثرات مخرب جدی بر محیط زیست و جامعه دارد:
-            </p>
-            <ul>
-                <li class="li-text"><strong style="color: #004ab8;">آلودگی هوا:  </strong> انتشار دی‌اکسید کربن، گوگرد و نیتروژن باعث گرمایش جهانی و باران‌های اسیدی می‌شود.</li>
-                <li class="li-text"><strong style="color: #004ab8;">تغییرات اقلیمی:  </strong> افزایش گازهای گلخانه‌ای، دمای زمین را بالا برده و باعث ذوب یخ‌ها و افزایش سطح آب دریاها شده است.</li>
-                <li class="li-text"><strong style="color: #004ab8;">تخریب اکوسیستم‌ها:  </strong> استخراج سوخت‌های فسیلی موجب نابودی جنگل‌ها، خاک و تهدید گونه‌های جانوری می‌شود.</li>
-            </ul>
-            <p>
-                در این بخش، با مشاهده مستندها، ویدیو کست‌ها و پادکست‌ها، می‌توانید بهتر با این اثرات آشنا شوید و ایده‌هایی برای کاهش آن‌ها پیدا کنید.
-            </p>
-                            </div>
-                        </div>
-
+    <section class="container mt-5">
+         <h3 class="title-border-min"> آسیب‌های سوخت‌های فسیلی به زمین</h3>
+        <div class="project-story">
+            <div class="row">
+                <div class="col-md-10">
+                    <p>
+						سوخت‌های فسیلی، مانند نفت، گاز و زغال‌سنگ، میلیون‌ها سال پیش در دل زمین شکل گرفته‌اند و امروز یکی از منابع اصلی انرژی بشر هستند.
+						اما استخراج و مصرف این منابع محدود، اثرات مخرب جدی بر محیط زیست و جامعه دارد:
+					</p>
+                         <ul>
+						<li class="li-text"><strong style="color: #004ab8;">آلودگی هوا:  </strong> انتشار دی‌اکسید کربن، گوگرد و نیتروژن باعث گرمایش جهانی و باران‌های اسیدی می‌شود.</li>
+						<li class="li-text"><strong style="color: #004ab8;">تغییرات اقلیمی:  </strong> افزایش گازهای گلخانه‌ای، دمای زمین را بالا برده و باعث ذوب یخ‌ها و افزایش سطح آب دریاها شده است.</li>
+						<li class="li-text"><strong style="color: #004ab8;">تخریب اکوسیستم‌ها:  </strong> استخراج سوخت‌های فسیلی موجب نابودی جنگل‌ها، خاک و تهدید گونه‌های جانوری می‌شود.</li>
+					</ul> 
+                    <p>
+						در این بخش، با مشاهده مستندها، ویدیو کست‌ها و پادکست‌ها، می‌توانید بهتر با این اثرات آشنا شوید و ایده‌هایی برای کاهش آن‌ها پیدا کنید.
+					</p>          
+                </div>
+            </div>
+        </div>
+    </section>
+   <div class="container" >
     <div class="slider-container">
 
         <div class="slide active">
@@ -476,6 +549,11 @@ flex-direction: column;
         </div>
     
     </div>
+	</div>
+
+
+
+
     <script>
         const slides = document.querySelectorAll('.slide');
         let index = 0;
@@ -486,30 +564,28 @@ flex-direction: column;
             slides[index].classList.add('active');
         }, 10000);
     </script>
-    <div class="cool">
-<section class="energy-section">
-    <h2 class="energy-title">ویدیو و مستند ها</h2>
-
-    <div class="media-section">
-        <!-- ویدیو مست دار -->
-        <div class="card-mov">
-            <video src="assets/film/164979ab3b8e81849f1ed554763c9bed62815176-240p.mp4" controls></video>
-        </div>
-        <!-- مستند 1 -->
-        <div class="card-mov">
-            <video src="assets/film/59c4cfb34ebbbbf6a92f22c3efed32519381245-240p.mp4" controls></video>
-        </div>
-        <!-- مستند 2 -->
-        <div class="card-mov">
-            <video src="assets/film/InShot_20260206_153424882.mp4" controls></video>
-        </div>
-    </div>
-</section>
-    <!-- بخش ویدیوها -->
-
     
-    <!-- بخش پادکست‌ها -->
-    <section class="energy-section">
+    <div class="cool ">
+      <section class="energy-section">
+          <h2 class="energy-title">ویدیو و مستند ها</h2>
+          <div class="media-section">
+        <!-- ویدیو مست دار -->
+			<div class="card-mov">
+				<video src="assets/film/164979ab3b8e81849f1ed554763c9bed62815176-240p.mp4" controls></video>
+			</div>
+			<!-- مستند 1 -->
+			<div class="card-mov">
+				<video src="assets/film/59c4cfb34ebbbbf6a92f22c3efed32519381245-240p.mp4" controls></video>
+			</div>
+			<!-- مستند 2 -->
+			<div class="card-mov">
+				<!-- <video src="assets/film/InShot_20260206_153424882.mp4" controls></video> -->
+			</div>
+           </div>
+      </section>
+       <!-- بخش ویدیوها -->
+	   <!-- بخش پادکست‌ها -->
+      <section class="energy-section">
         <h2 class="energy-title">
             پادکست‌
         </h2>
@@ -526,17 +602,9 @@ flex-direction: column;
             
         </div>
            
-           
-        </div>
-       
-
-    </section>
+      </section>         
     </div>
-
-
-   
-
-        
+            
 <script>
     function revealOnScroll() {
         const boxes = document.querySelectorAll('.text-box,.card-mov,card-content-pad');
@@ -574,7 +642,7 @@ flex-direction: column;
     });
   </script>
 
-          <footer>
+  <footer>
             <div class="container-fluid bg-dark w-100 px-0 mt-5" id="service-footer">
                 <div class="row mx-0">
                     <div class="col-lg-1 mt-5 form-footer">
@@ -628,11 +696,15 @@ flex-direction: column;
                     <div class="col-lg-2 px-0"></div>
                 </div>
             </div>
-        </footer>
+          </footer>
 
 
 
   <script src="assets/bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/oghat.js"></script>
+
+
 </body>
 
 </html>

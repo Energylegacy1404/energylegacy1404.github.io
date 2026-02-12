@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>نقشه کشورها - ایران، روسیه، چین، کانادا</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Vazir', 'Tahoma', Arial, sans-serif;
+            background: linear-gradient(135deg, #001b96 0%, #04004a 100%);
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .map-container {
+            position: relative;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            flex: 1;
+        }
+        
+        #map {
+            height: 600px;
+            width: 100%;
+            background: #a5d6f9;
+            border-radius:20px;
+            z-index: 1;
+        }
+        
+        /* استایل المان‌های کشورها - به صورت مطلق روی نقشه */
+        .country-marker {
+            position: absolute;
+            padding: 8px 20px;
+            border-radius: 50px;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            white-space: nowrap;
+            z-index: 1000;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate(-50%, -50%);
+        }
+        
+        .country-marker:hover {
+            transform: translate(-50%, -60%) scale(1.1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        
+        /* رنگ‌های متفاوت برای هر کشور */
+        .country-marker.iran {
+            background: linear-gradient(45deg, #239f3f, #1e7a31);
+            border-color: #fedd00;
+        }
+        
+        .country-marker.russia {
+            background: linear-gradient(45deg, #d52b1e, #9e1f15);
+            border-color: #0039a6;
+        }
+        
+        .country-marker.china {
+            background: linear-gradient(45deg, #de2910, #b0200c);
+            border-color: #ffde00;
+        }
+        
+        .country-marker.canada {
+            background: linear-gradient(45deg, #d52b1e, #a9201a);
+            border-color: #ffffff;
+        }
+        
+        /* راهنما */
+        <!-- .legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 1001;
+            backdrop-filter: blur(10px);
+            max-width: 300px;
+            width: calc(100% - 40px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+         -->
+        .legend h3 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.02);
+        }
+        
+        .color-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-left: 10px;
+            border: 2px solid white;
+        }
+        
+        .iran-box { background: linear-gradient(45deg, #239f3f, #fedd00, #d52b1e); }
+        .russia-box { background: linear-gradient(45deg, #d52b1e, #0039a6); }
+        .china-box { background: linear-gradient(45deg, #de2910, #ffde00); }
+        .canada-box { background: linear-gradient(45deg, #d52b1e, #ffffff); }
+        
+        .coordinates {
+            font-size: 12px;
+            color: #666;
+            margin-right: 10px;
+            direction: ltr;
+        }
+        
+        /* دکمه کنترل */
+        .map-controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            background: white;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            font-size: 14px;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            background: #f0f0f0;
+        }
+        
+        /* حالت رسپانسیو */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            #map {
+                height: 500px;
+            }
+            
+            .country-marker {
+                padding: 5px 12px;
+                font-size: 12px;
+            }
+            
+            .legend {
+                bottom: 10px;
+                left: 10px;
+                padding: 15px;
+                width: calc(100% - 20px);
+            }
+            
+            .btn {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+            
+            .map-controls {
+                top: 10px;
+                right: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #map {
+                height: 400px;
+            }
+            
+            .country-marker {
+                padding: 4px 10px;
+                font-size: 10px;
+                border-width: 1.5px;
+            }
+            
+            .legend h3 {
+                font-size: 1rem;
+            }
+            
+            .legend-item {
+                font-size: 12px;
+            }
+        }
+        
+        /* حالت افقی در موبایل */
+        @media (max-height: 600px) and (orientation: landscape) {
+            #map {
+                height: 300px;
+            }
+        }
+        
+        /* فوتر */
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        .map-point {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: red;
+            cursor: pointer;
+        }
+        
+        /* tooltip مخفی */
+        .point-tooltip {
+            position: absolute;
+            bottom: 22px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.85);
+            color: white;
+            padding: 8px 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.25s;
+        }
+        
+        /* فلش کوچیک */
+        .point-tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: rgba(0,0,0,0.85) transparent transparent transparent;
+        }
+        
+        /* هنگام هاور */
+        .map-point:hover .point-tooltip {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>🗺️ نقشه کشورهای منتخب</h1>
+    
+    <div class="map-container">
+        <!-- المان نقشه -->
+        <div id="map"></div>
+        
+        <!-- المان‌های کشورها (در ابتدا مخفی، با جاوااسکریپت نمایش داده می‌شن) -->
+        <div id="iran-marker" class="country-marker iran" style="display: none;">ایران
+            <div class="map-point iran">
+                <div class="point-tooltip">
+                    <strong>ایران</strong><br>
+                    نفت و گاز: بسیار بالا<br>
+                    رتبه جهانی: جزو بزرگ‌ترین دارندگان ذخایر
+                </div>
+            </div>
+        </div>
+        <div id="russia-marker" class="country-marker russia" style="display: none;">روسیه</div>
+        <div id="china-marker" class="country-marker china" style="display: none;">چین</div>
+        <div id="canada-marker" class="country-marker canada" style="display: none;">کانادا</div>
+
+        <div class="map-controls">
+            <button class="btn" onclick="showAllCountries()">🌍 نمایش همه</button>
+            <button class="btn" onclick="zoomToCountry('iran')">🇮🇷 ایران</button>
+            <button class="btn" onclick="zoomToCountry('russia')">🇷🇺 روسیه</button>
+            <button class="btn" onclick="zoomToCountry('china')">🇨🇳 چین</button>
+            <button class="btn" onclick="zoomToCountry('canada')">🇨🇦 کانادا</button>
+        </div>
+    </div>
+    
+    <footer>
+        نقشه تعاملی  
+    </footer>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script>
+        // ========== تنظیمات اولیه نقشه ==========
+        
+        // مختصات کشورها
+        const countries = {
+            iran: {
+                name: 'ایران',
+                lat: 35.6892,
+                lng: 51.3890,
+                element: 'iran-marker',
+                flag: '🇮🇷',
+                capital: 'تهران'
+            },
+            russia: {
+                name: 'روسیه',
+                lat: 55.7558,
+                lng: 37.6173,
+                element: 'russia-marker',
+                flag: '🇷🇺',
+                capital: 'مسکو'
+            },
+            china: {
+                name: 'چین',
+                lat: 39.9042,
+                lng: 116.4074,
+                element: 'china-marker',
+                flag: '🇨🇳',
+                capital: 'پکن'
+            },
+            canada: {
+                name: 'کانادا',
+                lat: 45.4215,
+                lng: -75.6972,
+                element: 'canada-marker',
+                flag: '🇨🇦',
+                capital: 'اتاوا'
+            }
+        };
+
+        // ========== ایجاد نقشه ==========
+        const map = L.map('map', {
+            center: [30, 30],  // مرکز اولیه
+            zoom: 2,           // زوم اولیه
+            zoomControl: true,
+            fadeAnimation: true,
+            zoomAnimation: true,
+            markerZoomAnimation: true
+        });
+
+        // ========== اضافه کردن لایه نقشه ==========
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            maxZoom: 19,
+            minZoom: 2
+        }).addTo(map);
+
+        // ========== تابع بروزرسانی موقعیت المان‌ها ==========
+        function updateMarkers() {
+            Object.keys(countries).forEach(countryId => {
+                const country = countries[countryId];
+                const markerElement = document.getElementById(country.element);
+                
+                if (!markerElement) return;
+                
+                // تبدیل مختصات جغرافیایی به پیکسل روی صفحه
+                const point = map.latLngToContainerPoint(
+                    L.latLng(country.lat, country.lng)
+                );
+                
+                // تنظیم موقعیت المان
+                markerElement.style.display = 'block';
+                markerElement.style.position = 'absolute';
+                markerElement.style.left = point.x + 'px';
+                markerElement.style.top = point.y + 'px';
+                markerElement.style.transform = 'translate(-50%, -50%)';
+                
+                // بروزرسانی محتوا (ریسپانسیو)
+                const isMobile = window.innerWidth <= 768;
+                const isVerySmall = window.innerWidth <= 480;
+                
+                if (isVerySmall) {
+                    markerElement.innerHTML = `${country.flag} ${country.name.substring(0, 2)}`;
+                } else if (isMobile) {
+                    markerElement.innerHTML = `${country.flag} ${country.name}`;
+                } else {
+                    markerElement.innerHTML = `${country.flag} ${country.name} - ${country.capital}`;
+                }
+            });
+        }
+
+        // ========== رویدادهای نقشه ==========
+        
+        // بروزرسانی موقعیت بعد از هر حرکت نقشه
+        map.on('moveend', updateMarkers);
+        map.on('zoomend', updateMarkers);
+        map.on('resize', function() {
+            setTimeout(updateMarkers, 50);  // تاخیر کوتاه برای اطمینان از اعمال resize
+        });
+
+        // ========== رویدادهای پنجره ==========
+        
+        // بروزرسانی با تغییر اندازه پنجره
+        window.addEventListener('resize', function() {
+            map.invalidateSize();  // مهم: به نقشه می‌گه اندازه تغییر کرده
+            setTimeout(updateMarkers, 50);
+        });
+
+        // بروزرسانی در لود اولیه
+        window.addEventListener('load', function() {
+            setTimeout(updateMarkers, 100);
+        });
+
+        // ========== توابع کنترل نقشه ==========
+        
+        // نمایش همه کشورها
+        window.showAllCountries = function() {
+            const bounds = L.latLngBounds([
+                [countries.iran.lat, countries.iran.lng],
+                [countries.russia.lat, countries.russia.lng],
+                [countries.china.lat, countries.china.lng],
+                [countries.canada.lat, countries.canada.lng]
+            ]);
+            
+            map.fitBounds(bounds, {
+                padding: [50, 50],
+                maxZoom: 5,
+                animate: true,
+                duration: 1
+            });
+        };
+
+        // زوم روی کشور خاص
+        window.zoomToCountry = function(countryId) {
+            const country = countries[countryId];
+            if (!country) return;
+            
+            map.flyTo([country.lat, country.lng], 6, {
+                animate: true,
+                duration: 1.5
+            });
+        };
+
+        // ========== اضافه کردن چند نقطه اضافی با Marker (پشتیبان) ==========
+        
+        // ایجاد markerهای معمولی Leaflet به عنوان پشتیبان
+        Object.keys(countries).forEach(countryId => {
+            const country = countries[countryId];
+            
+            // فقط برای نمایش - marker ساده
+            L.marker([country.lat, country.lng], {
+                opacity: 0.7,
+                interactive: false  // غیرفعال کردن تعامل برای عدم تداخل
+            }).addTo(map);
+        });
+
+        // ========== بروزرسانی اولیه ==========
+        setTimeout(() => {
+            updateMarkers();
+            showAllCountries();  // نمایش همه کشورها در شروع
+        }, 200);
+
+        // ========== مدیریت خطا ==========
+        window.onerror = function(msg, url, line) {
+            console.log('خطا:', msg, 'در خط:', line);
+            return false;
+        };
+
+        // ========== پشتیبانی از touch devices ==========
+        if (window.innerWidth <= 768) {
+            map.dragging.enable();
+            map.touchZoom.enable();
+            map.doubleClickZoom.enable();
+            map.scrollWheelZoom.enable();
+        }
+
+        // ========== ذخیره موقعیت در localStorage (آپشنال) ==========
+        function saveMapPosition() {
+            const center = map.getCenter();
+            const zoom = map.getZoom();
+            localStorage.setItem('mapPosition', JSON.stringify({
+                lat: center.lat,
+                lng: center.lng,
+                zoom: zoom
+            }));
+        }
+
+        function loadMapPosition() {
+            const saved = localStorage.getItem('mapPosition');
+            if (saved) {
+                try {
+                    const pos = JSON.parse(saved);
+                    map.setView([pos.lat, pos.lng], pos.zoom);
+                } catch(e) {
+                    console.log('خطا در بازیابی موقعیت');
+                }
+            }
+        }
+
+        // ذخیره موقعیت موقع خروج
+        window.addEventListener('beforeunload', saveMapPosition);
+        
+        // بارگذاری موقعیت ذخیره شده
+        setTimeout(loadMapPosition, 300);
+        
+    </script>
+
+    <!-- اضافه کردن فونت وزیر برای فارسی -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+</body>
+</html>
