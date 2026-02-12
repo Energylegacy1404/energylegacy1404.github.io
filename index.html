@@ -2,580 +2,599 @@
 <html lang="fa">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>آتش در سکوت</title>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/all.min.css" rel="stylesheet">
-    <link href="assets/css/theme.css" rel="stylesheet">
-    <link href="assets/css/oghat.css" rel="stylesheet">
-    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazirmatn/Vazirmatn.css" rel="stylesheet">
-    <style>
-        
-        /* 📱 حالت موبایل */
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords"
+		content="آتش در سکوت ، سوخت فسیلی ، مراحل تشکیل سوخت فسیلی ، نفت ، زغال سنگ ، گاز طبیعی ، فرآیند دیاژنز ، کروژن ، دفن رسوبات
+		انرژی تجدیدناپذیر ، زمان زمین شناسی  ، چند دقیقه با زمین ، فشار و دما ، زیست توده ">
+	<title>آتش در سکوت</title>
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link href="assets/css/all.min.css" rel="stylesheet">
+	<link href="assets/css/theme.css" rel="stylesheet">
+	<link href="assets/css/oghat1.css" rel="stylesheet">
+	<link href="https://cdn.fontcdn.ir/Font/Persian/Vazirmatn/Vazirmatn.css" rel="stylesheet">
+	<style>
+		/* 📱 حالت موبایل */
 
-        #user-pattern1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
+		#user-pattern1 {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 40px;
+		}
 
-/* عکس */
-#user-pattern1 img {
-    width: 45%;
-    height: auto;
-}
+		/* عکس */
+		#user-pattern1 img {
+			width: 45%;
+			height: auto;
+		}
 
-/* متن */
-/*#user-pattern {
+		/* متن */
+		/*#user-pattern {
     width: 50%;
 }*/
 
-/* 📱 موبایل */
+		/* 📱 موبایل */
 
 
 
-      .scroll-buttons {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            z-index: 9999;
-        }
+		.scroll-buttons {
+			position: fixed;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			z-index: 9999;
+		}
 
-        .scroll-buttons img {
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: all 0.3s ease;
-        }
+		.scroll-buttons img {
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+			opacity: 0.7;
+			transition: all 0.3s ease;
+		}
 
-        .scroll-buttons img:hover {
-            opacity: 1;
-            transform: scale(1.15);
-        }
 
-        .fossil-distribution-large {
-            max-width: 1200px;
-            /* باکس بزرگ */
-            margin: 50px auto;
-            /* فاصله از بادی */
-            padding: 30px;
-            /* فاصله داخلی */
-            background-color: #f5f5f5;
-            /* رنگ باکس مشابه باکس فناورانه */
-            border-radius: 12px;
-            text-align: center;
-            /* متن وسط */
-            direction: rtl;
-        }
+		.scroll-buttons img:hover {
+			opacity: 1;
+			transform: scale(1.15);
+		}
 
-        .fossil-text h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
+		.fossil-distribution-large {
+			max-width: 1200px;
+			/* باکس بزرگ */
+			margin: 50px auto;
+			/* فاصله از بادی */
+			padding: 30px;
+			/* فاصله داخلی */
+			background-color: #f5f5f5;
+			/* رنگ باکس مشابه باکس فناورانه */
+			border-radius: 12px;
+			text-align: center;
+			/* متن وسط */
+			direction: rtl;
+		}
 
-        .fossil-text h3 {
-            margin-top: 25px;
-            font-size: 22px;
-            color: black;
-        }
+		.fossil-text h2 {
+			font-size: 32px;
+			margin-bottom: 20px;
+		}
 
-        .fossil-text p {
-            font-size: 18px;
-            margin-bottom: 20px;
-            line-height: 2;
-            color: #333;
-        }
+		.fossil-text h3 {
+			margin-top: 25px;
+			font-size: 22px;
+			color: black;
+		}
 
-        .fossil-image {
-            margin-top: 40px;
-            /* فاصله عکس از متن */
-        }
+		.fossil-text p {
+			font-size: 18px;
+			margin-bottom: 20px;
+			line-height: 2;
+			color: #333;
+		}
 
-        .fossil-image img {
-            width: 100%;
-            /* عکس کامل و واضح */
-            border-radius: 12px;
-            display: block;
-        }
+		.fossil-image {
+			margin-top: 40px;
+			/* فاصله عکس از متن */
+		}
 
-        /* ریسپانسیو */
-        @media (max-width: 1200px) {
-            .fossil-distribution-large {
-                max-width: 95%;
-            }
-        }
+		.fossil-image img {
+			width: 100%;
+			/* عکس کامل و واضح */
+			border-radius: 12px;
+			display: block;
+		}
 
-        @media (max-width: 768px) {
-            .fossil-distribution-large {
-                padding: 20px;
-            }
+		/* ریسپانسیو */
+		@media (max-width: 1200px) {
+			.fossil-distribution-large {
+				max-width: 95%;
+			}
+		}
 
-            .fossil-text h2 {
-                font-size: 28px;
-            }
+		@media (max-width: 768px) {
+			.fossil-distribution-large {
+				padding: 20px;
+			}
 
-            .fossil-text h3 {
-                font-size: 20px;
-            }
+			.fossil-text h2 {
+				font-size: 28px;
+			}
 
-            .fossil-text p {
-                font-size: 16px;
-            }
-        }
+			.fossil-text h3 {
+				font-size: 20px;
+			}
 
-        #img-box {
-            height: 500px;
+			.fossil-text p {
+				font-size: 16px;
+			}
+		}
 
-        }
+		#img-box {
+			height: 500px;
 
-        #mx-0-foot{
-            width: 100%;
-            margin: 0px;
-          
-            display: flex;
-            flex-direction: column;
-            justify-content:center;
-            align-items: center;
-        } 
+		}
 
-        #user-pattern {
-            margin-bottom: 70px;
-        }
+		#mx-0-foot {
+			width: 100%;
+			margin: 0px;
 
-        .map-image {
-            width: 100%;
-            display: block;
-            position: relative;
-            z-index: 1;
-        }
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
 
-        .map-spot {
-            position: absolute;
-            z-index: 5;
-            /* ← خیلی مهم */
-        }
+		#user-pattern {
+			margin-bottom: 70px;
+		}
 
-        .fossil-map-section {
-            max-width: 1400px;
-            margin: 60px auto;
-            padding: 30px;
-            background: #0f172a;
-            border-radius: 20px;
-            color: #e5e7eb;
-        }
+		.map-image {
+			width: 100%;
+			display: block;
+			position: relative;
+			z-index: 1;
+		}
 
-        .fossil-map-content {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto 40px;
-        }
+		.map-spot {
+			position: absolute;
+			z-index: 5;
+			/* ← خیلی مهم */
+		}
 
-        .fossil-map-content h2 {
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
+		.fossil-map-section {
+			max-width: 1400px;
+			margin: 60px auto;
+			padding: 30px;
+			background: #0f172a;
+			border-radius: 20px;
+			color: #e5e7eb;
+		}
 
-        .fossil-map-content p {
-            line-height: 1.9;
-            color: #cbd5f5;
-        }
+		.fossil-map-content {
+			text-align: center;
+			max-width: 900px;
+			margin: 0 auto 40px;
+		}
 
-        .map-wrapper {
-            position: relative;
-            width: 100%;
-            margin-top: 20px;
-        }
+		.fossil-map-content h2 {
+			font-size: 28px;
+			margin-bottom: 15px;
+		}
 
-        .world-map {
-            width: 100%;
-            border-radius: 16px;
-            display: block;
-        }
+		.fossil-map-content p {
+			line-height: 1.9;
+			color: #cbd5f5;
+		}
 
-        /* نقاط */
-        .map-point {
-            position: absolute;
-            width: 28px;
-            height: 28px;
-            background: rgba(255, 255, 255, 0.15);
-            border: 2px solid #38bdf8;
-            border-radius: 50%;
-            cursor: pointer;
-            animation: pulse 2.5s infinite;
-        }
+		.map-wrapper {
+			position: relative;
+			width: 100%;
+			margin-top: 20px;
+		}
 
-        .map-point::after {
-            content: "";
-            position: absolute;
-            inset: -12px;
-            background: rgba(56, 189, 248, 0.15);
-            border-radius: 50%;
-            opacity: 0;
-            transition: 0.3s;
-        }
+		.world-map {
+			width: 100%;
+			border-radius: 16px;
+			display: block;
+		}
 
-        .map-point:hover::after {
-            opacity: 1;
-        }
+		/* نقاط */
+		.map-point {
+			position: absolute;
+			width: 28px;
+			height: 28px;
+			background: rgba(255, 255, 255, 0.15);
+			border: 2px solid #38bdf8;
+			border-radius: 50%;
+			cursor: pointer;
+			animation: pulse 2.5s infinite;
+		}
 
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.4);
-            }
+		.map-point::after {
+			content: "";
+			position: absolute;
+			inset: -12px;
+			background: rgba(56, 189, 248, 0.15);
+			border-radius: 50%;
+			opacity: 0;
+			transition: 0.3s;
+		}
 
-            70% {
-                box-shadow: 0 0 0 18px rgba(56, 189, 248, 0);
-            }
+		.map-point:hover::after {
+			opacity: 1;
+		}
 
-            100% {
-                box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);
-            }
-        }
+		@keyframes pulse {
+			0% {
+				box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.4);
+			}
 
-        /* موقعیت‌ها (تقریبی – قابل تنظیم) */
-        .usa {
-            top: 40%;
-            left: 15%;
-        }
+			70% {
+				box-shadow: 0 0 0 18px rgba(56, 189, 248, 0);
+			}
 
-        .russia {
-            top: 30%;
-            left: 70%;
-        }
+			100% {
+				box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);
+			}
+		}
 
-        .iran {
-            top: 45%;
-            left: 60%;
-        }
+		/* موقعیت‌ها (تقریبی – قابل تنظیم) */
+		.usa {
+			top: 40%;
+			left: 15%;
+		}
 
-        .china {
-            top: 43%;
-            left: 70%;
-        }
+		.russia {
+			top: 30%;
+			left: 70%;
+		}
 
-        /* Tooltip */
-        .map-tooltip {
-            position: absolute;
-            background: rgba(15, 23, 42, 0.95);
-            border: 1px solid #38bdf8;
-            color: #fff;
-            padding: 12px 14px;
-            border-radius: 10px;
-            font-size: 14px;
-            line-height: 1.6;
-            display: none;
-            z-index: 999;
-            max-width: 260px;
-        }
+		.iran {
+			top: 45%;
+			left: 60%;
+		}
 
-        #user-pattern1 {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
+		.china {
+			top: 43%;
+			left: 70%;
+		}
 
-        #user-pattern1 img {
-            width: 500px;
-            height: 650px;
-            margin-top: 60px;
-        }
-        #khat{
-            width:0px;
-            height:1px;
-            background-color: #38bdf8;
-            margin-bottom:50px;
-        }
-      
-        .img-fluid{
-            margin-top: 100px;
-        }
-        .card{
-            border: 0.5px solid #6f6f6f;
-           
-        }
-        .row{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom:30px;
-        }
-        .col-md-6{
-            margin-bottom:0px;
-            margin-top: 0%;
-       
-        }
-        #row-id2{
-           
-            margin-top: 130px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom:50px;
-            padding-bottom:0px;
-            
-        }
-        .text-secondary{
-            margin-bottom:0px;
-            padding-bottom:0px;
-        }
-        #user-pattern{
-            height:650px;
-        }
-        body{
-            font-family: "b-yekan";
-        }
-        .card-body{
-            border:#6f6f6f ;
-        }
-        #card-body-id{
-            border-left:1px solid  #6f6f6f ;
-        }
-        .card-img-top{
-            width:100%;
-            height: 50%;
-        }
-        #card-kind-fossil{
-            height:900px;
-        }
-        .project-story {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            margin: 40px 0;
-        }
-        .project-story{
-            background-color: beige;
-            border: 1px #000 solid;
-        }
-        .team-card{
-            background-color: rgb(245, 237, 220);
-        }
-        .map-button{
-            width:100px;
-            height:40px;
-            background-color: #38bdf8;
-            border: none;
-            border-radius:10px;
-        }
-        .map-button a{
-            text-decoration: none;
-            color: #000;
-            margin-right:10px;
-        }
-        .map-button img{
-            margin-bottom: 3px;
-        }
-    </style>
+		/* Tooltip */
+		.map-tooltip {
+			position: absolute;
+			background: rgba(15, 23, 42, 0.95);
+			border: 1px solid #38bdf8;
+			color: #fff;
+			padding: 12px 14px;
+			border-radius: 10px;
+			font-size: 14px;
+			line-height: 1.6;
+			display: none;
+			z-index: 999;
+			max-width: 260px;
+		}
+
+		#user-pattern1 {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		#user-pattern1 img {
+			width: 500px;
+			height: 650px;
+			margin-top: 60px;
+		}
+
+		#khat {
+			width: 0px;
+			height: 1px;
+			background-color: #38bdf8;
+			margin-bottom: 50px;
+		}
+
+		.img-fluid {
+			margin-top: 100px;
+		}
+
+		.card {
+			border: 0.5px solid #6f6f6f;
+
+		}
+
+		.row {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin-bottom: 30px;
+		}
+
+		.col-md-6 {
+			margin-bottom: 0px;
+			margin-top: 0%;
+
+		}
+
+		#row-id2 {
+
+			margin-top: 130px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+			padding-bottom: 0px;
+
+		}
+
+		.text-secondary {
+			margin-bottom: 0px;
+			padding-bottom: 0px;
+		}
+
+		#user-pattern {
+			height: 650px;
+		}
+
+		body {
+			font-family: "b-yekan";
+		}
+
+		.card-body {
+			border: #6f6f6f;
+		}
+
+		#card-body-id {
+			border-left: 1px solid #6f6f6f;
+		}
+
+		.card-img-top {
+			width: 100%;
+			height: 50%;
+		}
+
+		#card-kind-fossil {
+			height: 900px;
+		}
+
+		.project-story {
+			background: white;
+			border-radius: 15px;
+			padding: 30px;
+			box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+			margin: 40px 0;
+		}
+
+		.project-story {
+			background-color: beige;
+			border: 1px #000 solid;
+		}
+
+		.team-card {
+			background-color: rgb(245, 237, 220);
+		}
+
+		.map-button {
+			width: 100px;
+			height: 40px;
+			background-color: #38bdf8;
+			border: none;
+			border-radius: 10px;
+		}
+
+		.map-button a {
+			text-decoration: none;
+			color: #000;
+			margin-right: 10px;
+		}
+
+		.map-button img {
+			margin-bottom: 3px;
+		}
+	</style>
 </head>
 
 <body class="dark-mode">
-    <header class="container-fluid position-relative">
-        <div class="pattern-header w-100 position-absolute top-0 end-0"></div>
-        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#navbarSupportedContent" aria-expanded="false">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse order-lg-1 order-2">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">سوخت های فسیلی</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index -chand-dahgihge-ba-zamin.html">چند دقیقه با زمین</a>
-                        </li>
+	<header class="container-fluid position-relative">
+		<div class="pattern-header w-100 position-absolute top-0 end-0"></div>
+		<nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+			<div class="container">
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+					data-bs-target="#navbarSupportedContent" aria-expanded="false">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse order-lg-1 order-2">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="index.html">سوخت های فسیلی</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index_chand_dahgihge_ba_zamin.html">چند دقیقه با زمین</a>
+						</li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" aria-disabled="true" href="index -rahkar.html">راهکار ها</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="darbarema.html">درباره ما</a>
-                        </li>
-                    </ul>
-                </div>
-                                <!--  88888888888888888888888888888888888888888888888  aval dokme oghat   -->
-					<button class="prayer-button" id="prayerButton">
-						<span class="prayer-icon">🕋</span>
-						<!-- <span class="prayer-text">اوقات شرعی</span> -->
-						<span class="arrow-icon">▼</span>
-					</button>                   
-                    <!-- پاپ‌آپ اوقات شرعی - پیش‌فرض مشهد -->
-					<div class="prayer-popup" id="prayerPopup">
-						<div class="popup-header">
-							<div class="popup-title">
-								<span style="font-size:1.5rem;">🕋</span>
-								<h3>اوقات شرعی</h3>
-							</div>
-							<button class="close-btn" id="closePopupBtn">✕</button>
+						<li class="nav-item">
+							<a class="nav-link" aria-disabled="true" href="index -rahkar.html">راهکار ها</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="darbarema.html">درباره ما</a>
+						</li>
+					</ul>
+				</div>
+				<!--  88888888888888888888888888888888888888888888888  aval dokme oghat   -->
+				<button class="prayer-button" id="prayerButton">
+					<span class="prayer-icon">🕋</span>
+					<!-- <span class="prayer-text">اوقات شرعی</span> -->
+					<span class="arrow-icon">▼</span>
+				</button>
+				<!-- پاپ‌آپ اوقات شرعی - پیش‌فرض مشهد -->
+				<div class="prayer-popup" id="prayerPopup">
+					<div class="popup-header">
+						<div class="popup-title">
+							<span style="font-size:1.5rem;">🕋</span>
+							<h3>اوقات شرعی</h3>
 						</div>
-
-						<!-- انتخاب شهر داخل پاپ‌آپ -->
-						<div class="popup-city">
-							<label for="popupCitySelect">📍 شهر:</label>
-							<select id="popupCitySelect">
-								<option value="mashhad" selected>مشهد</option>
-								<option value="tehran">تهران</option>
-								<option value="isfahan">اصفهان</option>
-								<option value="shiraz">شیراز</option>
-								<option value="tabriz">تبریز</option>
-								<option value="kerman">کرمان</option>
-								<option value="rasht">رشت</option>
-								<option value="yazd">یزد</option>
-							</select>
-						</div>
-
-						<!-- گرید اوقات شرعی -->
-						<div class="popup-grid" id="popupPrayerGrid"></div>
-
-						<!-- فوتر تاریخ -->
-						<div class="popup-footer" id="popupFooter"></div>
+						<button class="close-btn" id="closePopupBtn">✕</button>
 					</div>
-                    
-   <!--  88888888888888888888888888888888888888888888888   akhar  dokme oghat  -->
-                <div>
-                    <!-- چراغ تم -->
-                    <img id="theme-toggle" src="assets/img/sun-64.png" alt="تم روشن" class="theme-icon" width="55px">
-                </div>
-                       
-                <a class="navbar-brand order-1 order-lg-2" href="/">
-                    <img src="assets/img/logo-final-1.png" class="my-img">
-                    <!-- <h5>هنرستان  فرهنگیان</h5> -->
-                </a>
-            </div>
-        </nav>
-        <div class="container position-relative">
-            <div class="row">
-                <div class="col-12 text-center d-flex justify-content-center align-items-center flex-column"
-                    id="content-header">
-                    <h1 class="text-white w-50 mx-auto title-border" id="title-head">سکوت زمین در میان دود</h1>
-                    <p class="text-secondary w-50 mx-auto mt-5">
-                        پروژه دانش آموزی درباره سوخت های فسیلی و آینده انرژی جهان
-                    </p>
-                    <p class="text-secondary w-50 mx-auto mt-5">
-                        کُلُوا وَ اشْرَبُوا وَ لا تُسْرِفُوا إِنّهُ لا یُحِبّ الْمُسْرِفینَ (سوره اعراف / آیه 31 )
-                        <br>
-                        بخورید و بیاشامید ولی اسراف نکنید زیرا خداوند مسرفان را دوست ندارد.
-                        <br>
-                        <br>
-                        با اسراف، سرمایه محبت الهی که نعمتی بزرگ است، از دست انسان می‌رود. و می‌شود گفت هر کس این نعمت
-                        را از دست دهد، گرفتار عذاب می‌شود.
-                    </p>
-                    <div id="test" class="text-white">
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-
-    
-
-
-    <section class="container mt-5">
-         <h3 class="title-border-min">مقدمه</h3>
-        <div class="project-story">
-            <div class="row">
-                <div class="col-md-10">
-                    <p>امروزه با وجود پیشرفت های گسترده در زمینه انرژی های تجدید پذیر ، بخش بزرگی از نیاز انرژی جهان
-                            همچنان از سوخت های فسیلی تامین می شود. این منابع انرژی اگرچه نقش مهمی در توسعه صنعت ، حمل و
-                            نقل
-                            و تولید برق داشته اند ، اما استفاده بی رویه از آنهار باعث ایجاد چالش های جدی
-                            <br>
-                            زیست محیطی شده است.
-                            <br>
-                            افزایش آلودگی هوا ، گرم شدن زمین و تغییرات اقلیمی تنها بخشی از پیامد های مصرف گسترده
-                            این سوخت ها هستند. با این حال ، بسیاری از کشور ها به دلیل دسترسی آسان ، هزینه کمتر
-                            و زیر ساخت های قدیمی هنوز وابستگی زیادی به این منایع دارند.
-                            <br>
-                            شناخت علمی سوخت های فسیلی و آگاهی از آینده آنها می تواند به ما کمک کند انتخاب های مسئولانه
-                            تصویر برای حفظ
-                            زمین داشته باشیم.
-                        </p>
-                </div>
-            </div>
-        </div>
-    </section>
-                <!-- تگ اسلایدر -->
-		<div id="carouselExample" class="carousel slide">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="assets/img/sookht foosili.jpg" class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block text-black">
-						<h5> سوخت های فسیلی</h5>
-						<p> سوخت های فسیلی شامل زغال سنگ ، نفت و گاز طبیعی هستند که به عنوان منابع اصلی انرژی در
-							دنیای امروز شناخته می شوند.</p>
+					<!-- انتخاب شهر داخل پاپ‌آپ -->
+					<div class="popup-city">
+						<label for="popupCitySelect">📍 شهر:</label>
+						<select id="popupCitySelect">
+							<option value="mashhad" selected>مشهد</option>
+							<option value="tehran">تهران</option>
+							<option value="isfahan">اصفهان</option>
+							<option value="shiraz">شیراز</option>
+							<option value="tabriz">تبریز</option>
+							<option value="kerman">کرمان</option>
+							<option value="rasht">رشت</option>
+							<option value="yazd">یزد</option>
+						</select>
 					</div>
+
+					<!-- گرید اوقات شرعی -->
+					<div class="popup-grid" id="popupPrayerGrid"></div>
+
+					<!-- فوتر تاریخ -->
+					<div class="popup-footer" id="popupFooter"></div>
 				</div>
-				<div class="carousel-item">
-					<img src="assets/img/zooghal sang.jpg" class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block">
-						<h5> زغال سنگ </h5>
-						<p> زغال سنگ یک منبع انرژی قدیمی است که در بسیاری از صنایع استفاده می شود ، اما تاثیرات
-							زیست محیطی زیادی دارد.</p>
 
-					</div>
+				<!--  88888888888888888888888888888888888888888888888   akhar  dokme oghat  -->
+				<div>
+					<!-- چراغ تم -->
+					<img id="theme-toggle" src="assets/img/sun-64.png" alt="تم روشن" class="theme-icon" width="55px">
 				</div>
-				<div class="carousel-item">
-					<img src="assets/img/crud-oil-compound.jpg" class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block">
-						<h5> نفت </h5>
-						<p> نفت یکی از مهم ترین سوخت ها در حمل و نقل و تولید برق است ، اما استخراج و استفاده از
-							آن به تغییرات اقلیمی منجر می شود. </p>
 
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img src="assets/img/76524.jpg" class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block text-black">
-						<h5> گاز طبیعی</h5>
-						<p> گاز طبیعی نسبت به زغال سنگ و نفت ، آلایندگی کمتری دارد و به عنوان یک گزینه ی انتقادی
-							در کاهش کربن شناخته می شود.</p>
-
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img src="assets/img/62960983.png" class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block">
-						<h5> اثرات زیست محیطی </h5>
-						<p> استفاده از سوخت های فسیلی باعث آلودگی هوا ، تغییرات اقلیمی و از بین رفتن منابع طبیعی
-							می شود. </p>
-
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img src="assets/img/images (4).jpeg" class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block">
-						<h5> آینده سوخت های فسیلی </h5>
-						<p> با پیشرفت فناوری و افزایش آگاهی ، به سمت منابع انرژی تجدید پذیر حرکت می کنیم تا از
-							اثرات منفی سوخت های فسیلی بکاهیم</p>
+				<a class="navbar-brand order-1 order-lg-2" href="/">
+					<img src="assets/img/logo-final-1.png" class="my-img">
+					<!-- <h5>هنرستان  فرهنگیان</h5> -->
+				</a>
+			</div>
+		</nav>
+		<div class="container position-relative">
+			<div class="row">
+				<div class="col-12 text-center d-flex justify-content-center align-items-center flex-column"
+					id="content-header">
+					<h1 class="text-white w-50 mx-auto title-border" id="title-head">سکوت زمین در میان دود</h1>
+					<p class="text-secondary w-50 mx-auto mt-5">
+						پروژه دانش آموزی درباره سوخت های فسیلی و آینده انرژی جهان
+					</p>
+					<p class="text-secondary w-50 mx-auto mt-5">
+						کُلُوا وَ اشْرَبُوا وَ لا تُسْرِفُوا إِنّهُ لا یُحِبّ الْمُسْرِفینَ (سوره اعراف / آیه 31 )
+						<br>
+						بخورید و بیاشامید ولی اسراف نکنید زیرا خداوند مسرفان را دوست ندارد.
+						<br>
+						<br>
+						با اسراف، سرمایه محبت الهی که نعمتی بزرگ است، از دست انسان می‌رود. و می‌شود گفت هر کس این نعمت
+						را از دست دهد، گرفتار عذاب می‌شود.
+					</p>
+					<div id="test" class="text-white">
 
 					</div>
 				</div>
 			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-				data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-				data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
 		</div>
-		
-		<!-- <div class="carousel-item active">
+	</header>
+
+
+
+
+
+	<section class="container mt-5">
+		<h3 class="title-border-min">مقدمه</h3>
+		<div class="project-story">
+			<div class="row">
+				<div class="col-md-10 w-100">
+					<p>امروزه با وجود پیشرفت های گسترده در زمینه انرژی های تجدید پذیر ، بخش بزرگی از نیاز انرژی جهان
+						همچنان از سوخت های فسیلی تامین می شود. این منابع انرژی اگرچه نقش مهمی در توسعه صنعت ، حمل و
+						نقل
+						و تولید برق داشته اند ، اما استفاده بی رویه از آنهار باعث ایجاد چالش های جدی
+						
+						زیست محیطی شده است.
+						<br>
+						افزایش آلودگی هوا ، گرم شدن زمین و تغییرات اقلیمی تنها بخشی از پیامد های مصرف گسترده
+						این سوخت ها هستند. با این حال ، بسیاری از کشور ها به دلیل دسترسی آسان ، هزینه کمتر
+						و زیر ساخت های قدیمی هنوز وابستگی زیادی به این منایع دارند.
+						<br>
+						شناخت علمی سوخت های فسیلی و آگاهی از آینده آنها می تواند به ما کمک کند انتخاب های مسئولانه
+						تصویر برای حفظ
+						زمین داشته باشیم.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- تگ اسلایدر -->
+	<div id="carouselExample" class="carousel slide">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="assets/img/sookht foosili.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block text-black">
+					<h5> سوخت های فسیلی</h5>
+					<p> سوخت های فسیلی شامل زغال سنگ ، نفت و گاز طبیعی هستند که به عنوان منابع اصلی انرژی در
+						دنیای امروز شناخته می شوند.</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="assets/img/zooghal_sang.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5> زغال سنگ </h5>
+					<p> زغال سنگ یک منبع انرژی قدیمی است که در بسیاری از صنایع استفاده می شود ، اما تاثیرات
+						زیست محیطی زیادی دارد.</p>
+
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="assets/img/crud-oil-compound.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5> نفت </h5>
+					<p> نفت یکی از مهم ترین سوخت ها در حمل و نقل و تولید برق است ، اما استخراج و استفاده از
+						آن به تغییرات اقلیمی منجر می شود. </p>
+
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="assets/img/76524.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block text-black">
+					<h5> گاز طبیعی</h5>
+					<p> گاز طبیعی نسبت به زغال سنگ و نفت ، آلایندگی کمتری دارد و به عنوان یک گزینه ی انتقادی
+						در کاهش کربن شناخته می شود.</p>
+
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="assets/img/62960983.png" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5> اثرات زیست محیطی </h5>
+					<p> استفاده از سوخت های فسیلی باعث آلودگی هوا ، تغییرات اقلیمی و از بین رفتن منابع طبیعی
+						می شود. </p>
+
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="assets/img/images (4).jpeg" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5> آینده سوخت های فسیلی </h5>
+					<p> با پیشرفت فناوری و افزایش آگاهی ، به سمت منابع انرژی تجدید پذیر حرکت می کنیم تا از
+						اثرات منفی سوخت های فسیلی بکاهیم</p>
+
+				</div>
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
+
+	<!-- <div class="carousel-item active">
 			<img class="d-block w-100">
 			<div class="carousel-caption d-none d-md-block">
 				<h5> سوخت های فسیلی</h5>
@@ -584,13 +603,13 @@
 			</div>
 		</div> -->
 
-		<!-- نحوه تشکیل سوخت های فسیلی -->
-		<section class="container mt-5">
-			<h3 class="title-border-min">نحوه تشکیل سوخت های فسیلی</h3>
-			<div class="project-story">
-				<div class="row">
-					<div class="col-md-10">
-						<p>
+	<!-- نحوه تشکیل سوخت های فسیلی -->
+	<section class="container mt-5">
+		<h3 class="title-border-min">نحوه تشکیل سوخت های فسیلی</h3>
+		<div class="project-story">
+			<div class="row">
+				<div class="col-md-10 w-100">
+					<p>
 						سوخت های فسیلی در واقع بقایای گیاهان و جاندارانی هسند که میلیون ها سال پیش زندگی می
 						کردند.
 						این موجودات در زمان حیات خود انرژی خورشید را ذخیره کردند و پس از مرگ ، در شرایط خاص
@@ -610,73 +629,71 @@
 						انسان را تامین می کند. اما چون تشکیل آنها میلیون ها سال طول کشیده و مصرفشان بسیار
 						سریع است ،
 						جزو منابع تجدید ناپذیر محسوب می شوند.
-									</p>
-					</div>
+					</p>
 				</div>
-            </div>
-        </section>
-                
-        <section class="container mt-5">
-          <h3 class="title-border-min"> ساختار شیمیایی سوخت های فسیلی </h3>
-          <div class="project-story">
-            <div class="row">
-               <div class="col-md-10">
-                <p>
-					سوخت‌های فسیلی عمدتاً از ترکیباتی به نام هیدروکربن‌ها تشکیل شده‌اند. هیدروکربن‌ها
-					مولکول‌هایی هستند که فقط از دو عنصر اصلی ساخته شده‌اند: کربن (C) و هیدروژن (H). نحوه
-					اتصال این اتم‌ها به یکدیگر تعیین می‌کند که سوخت مورد نظر گاز باشد، مایع باشد یا
-					جامد.
-					<br>
-					برای مثال :
-					مولکول‌های سبک‌تر با تعداد اتم کمتر معمولاً گازی هستند (مثل متان)
-					مولکول‌های متوسط مایع‌اند (مثل بنزین)
-					مولکول‌های بسیار بزرگ و پیچیده به صورت جامد دیده می‌شوند (مثل زغال‌سنگ)
-					انرژی موجود در سوخت‌های فسیلی در واقع انرژی ذخیره‌شده در پیوندهای شیمیایی همین
-					اتم‌های کربن و هیدروژن است که هنگام سوختن آزاد می‌شود.
-				</p>
-               </div>
-            </div>
-          </div>
-        </section>
-                
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarSupportedContent"
-                    aria-labelledby="offcanvasExampleLabel">
-            <div class="offcanvas-header justify-content-between">
-               <h5 class="offcanvas-title" id="offcanvasExampleLabel">منو</h5>
-               <button type="button" class="btn-close ms-0" data-bs-dismiss="offcanvas"
-                            aria-label="Close">
-               </button>
-            </div>
-		    <div class="offcanvas-body">
-				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="index.html">سوخت های فسیلی</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="index -chand-dahgihge-ba-zamin.html">چند دقیقه با زمین</a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" href="index -rahkar.html">   راهکار ها</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="darbarema.html">  درباره ما </a>
-					</li>
-				</ul>
-		    </div>
-        </div>
-		<br>
-		<!-- باکس های متن -->
-		<section class="container mt-5">
-			<div class="col-12 text-center" id="services">
-				<h3 class="title-border-min" id="">انواع سوخت های فسیلی</h3>
-				<div id="khat"></div>
 			</div>
-			<div class="card-group">
+		</div>
+	</section>
+
+	<section class="container mt-5">
+		<h3 class="title-border-min"> ساختار شیمیایی سوخت های فسیلی </h3>
+		<div class="project-story">
+			<div class="row">
+				<div class="col-md-10 w-100">
+					<p>
+						سوخت‌های فسیلی عمدتاً از ترکیباتی به نام هیدروکربن‌ها تشکیل شده‌اند. هیدروکربن‌ها
+						مولکول‌هایی هستند که فقط از دو عنصر اصلی ساخته شده‌اند: کربن (C) و هیدروژن (H). نحوه
+						اتصال این اتم‌ها به یکدیگر تعیین می‌کند که سوخت مورد نظر گاز باشد، مایع باشد یا
+						جامد.
+						<br>
+						برای مثال :
+						مولکول‌های سبک‌تر با تعداد اتم کمتر معمولاً گازی هستند (مثل متان)
+						مولکول‌های متوسط مایع‌اند (مثل بنزین)
+						مولکول‌های بسیار بزرگ و پیچیده به صورت جامد دیده می‌شوند (مثل زغال‌سنگ)
+						انرژی موجود در سوخت‌های فسیلی در واقع انرژی ذخیره‌شده در پیوندهای شیمیایی همین
+						اتم‌های کربن و هیدروژن است که هنگام سوختن آزاد می‌شود.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="offcanvas offcanvas-end" tabindex="-1" id="navbarSupportedContent"
+		aria-labelledby="offcanvasExampleLabel">
+		<div class="offcanvas-header justify-content-between">
+			<h5 class="offcanvas-title" id="offcanvasExampleLabel">منو</h5>
+			<button type="button" class="btn-close ms-0" data-bs-dismiss="offcanvas" aria-label="Close">
+			</button>
+		</div>
+		<div class="offcanvas-body">
+			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link" aria-current="page" href="index.html">سوخت های فسیلی</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="index_chand_dahgihge_ba_zamin.html">چند دقیقه با زمین</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="index -rahkar.html"> راهکار ها</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="darbarema.html"> درباره ما </a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<br>
+	<!-- باکس های متن -->
+	<section class="container mt-5">
+		<div class="col-12 text-center" id="services">
+			<h3 class="title-border-min" id="">انواع سوخت های فسیلی</h3>
+			<div id="khat"></div>
+		</div>
+		<div class="card-group">
 			<div class="card" id="card-kind-fossil">
-				<img src="assets/img/a0a85872-5ede-4e71-b5c3-0c489d8bc4ab_64265.jpg" class="card-img-top"
-					alt="...">
-				<div class="card-body" >
+				<img src="assets/img/a0a85872-5ede-4e71-b5c3-0c489d8bc4ab_64265.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
 					<h5 class="card-title" id="zoghal">زغال سنگ (Coal)</h5>
 					<p class="card-text">زغال سنگ از بقایای گیاهان عظیم و انبوه دوران باستان به وجود آمده است.
 						حدود 300 میلیون سال پیش ، زمین پوشیده از جنگل های باتلاقی بزرگ بود.
@@ -686,17 +703,16 @@
 						را زغال سنگ می نامیم.
 					</p>
 					<p class="card-text" id="text-body-secondary">
-							ترکیب اصلی : کربن ، به همراه مقدار کمی گوگرد ، نیتروژن و مواد معدنی.
-							کاربرد اصلی : تولید برق در نیروگاه های حرارتی.
-							ویژگی مهم : هنگام سوختن ، مقدار زیادی دی اکسید کربن ، دی اکسید گوگرد و ذرات معلق
-							وارد هوا می کند.
-							زغال سنگ یکی از آلاینده ترین سوخت های فسیلی است ، اما هنوز هم در بسیاری از کشور ها
-							منبع اصلی تولید برق به شمار می رود.</p>
+						ترکیب اصلی : کربن ، به همراه مقدار کمی گوگرد ، نیتروژن و مواد معدنی.
+						کاربرد اصلی : تولید برق در نیروگاه های حرارتی.
+						ویژگی مهم : هنگام سوختن ، مقدار زیادی دی اکسید کربن ، دی اکسید گوگرد و ذرات معلق
+						وارد هوا می کند.
+						زغال سنگ یکی از آلاینده ترین سوخت های فسیلی است ، اما هنوز هم در بسیاری از کشور ها
+						منبع اصلی تولید برق به شمار می رود.</p>
 				</div>
 			</div>
 			<div class="card">
-				<img src="assets/img/boorj nafti.jpg"
-					class="card-img-top" alt="...">
+				<img src="assets/img/boorj nafti.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">نفت (Petroleum)</h5>
 					<p class="card-text">نفت از بقایای جانداران میکروسکوپی دریایی مانند پلانکتون ها و جلبک ها
@@ -707,79 +723,80 @@
 						نفت خام مستقیما قابل استفاده نیست و باید در پالایشگاه ها جدا و فرآوری شود.
 					</p>
 					<p class="card-text" id="text-body-secondary">ترکیب اصلی : هیدروکربن ها ( ترکیباتی
-							از هیدروژن و کربن )
-							کاربرد ها : تولید بنزین ، گازوئیل ، سوخت هواپیما ، روغن ها ، پلاستیک ، الیاف مصنوعی
-							و هزاران ماده شیمیایی.
-							پیامد زیست محیطی : سوزاندن و فرآورده های نفتی مقدار زیادی گاز گلخانه ای تولید می کند
-							که در گرمایش جهانی نقش دارد.
-							نفت مهم ترین سوخت برای حمل و نقل در جهان است و نقش بسیار بزرگی در اقتصاد جهانی دارد.
-						</p>
+						از هیدروژن و کربن )
+						کاربرد ها : تولید بنزین ، گازوئیل ، سوخت هواپیما ، روغن ها ، پلاستیک ، الیاف مصنوعی
+						و هزاران ماده شیمیایی.
+						پیامد زیست محیطی : سوزاندن و فرآورده های نفتی مقدار زیادی گاز گلخانه ای تولید می کند
+						که در گرمایش جهانی نقش دارد.
+						نفت مهم ترین سوخت برای حمل و نقل در جهان است و نقش بسیار بزرگی در اقتصاد جهانی دارد.
+					</p>
 				</div>
 			</div>
 			<div class="card">
-					<img src="assets/img/filo_gas-stoves-on-dark_34771523_480w.webp" class="card-img-top" alt="...">
-					<div class="card-body" id="card-body-id">
-						<h5 class="card-title">گاز طبیعی (Natural Gas)</h5>
-						<p class="card-text">گاز طبیعی نیز مانند نفت از بقایای جانداران باستانی به وجود آمده ، اما
-							در شرایطی که تجزیه مواد آلی کامل تر بوده است.
-							این گاز اغلب همراه نفت یا در میدان های مستقل گازی در اعماق زمین یافت می شود.
-							جزء اصلی گاز طبیعی متان (CH4) است ، که ساده ترین نوع هیدروکربن است.
-						</p>
-						<p class="card-text" id="text-body-secondary">ترکیب اصلی : متان به همراه مقدار کمی
-								اتان ، پروپان و گازهای دیگر.
-								کاربرد ها : گرمایش خانه ها ، پخت و پز ، تولید برق و خوراک صنایع پتروشیمی.
-								مزیت نسبت به بقیه : هنگام سوختن ، دی اکسید کربن و آلودگی کمتری نسبت به زغال سنگ و
-								نفت تولید می کند.
-								نکته مهم : نشت متان به جو خطرناک است ، چون متان یک گاز گلخانه ای بسیار قوی است.
-								گاز طبیعی (پاک ترین سوخت فسلی) نامیده می شود ، اما همچنان در تغییرات اقلیمی نقش
-								دارد.
-						   </p>
-					</div>
-                </div>
-        </div>
-	    </section>
-	    
-		<div class="container" id="services">
-			<div class="row mt-5">
-				<div class="col-12 text-center">
-					<!-- <h3 class="title-border-min"> ساختار شیمیایی سوخت های فسیلی </h3> -->
+				<img src="assets/img/filo_gas-stoves-on-dark_34771523_480w.webp" class="card-img-top" alt="...">
+				<div class="card-body" id="card-body-id">
+					<h5 class="card-title">گاز طبیعی (Natural Gas)</h5>
+					<p class="card-text">گاز طبیعی نیز مانند نفت از بقایای جانداران باستانی به وجود آمده ، اما
+						در شرایطی که تجزیه مواد آلی کامل تر بوده است.
+						این گاز اغلب همراه نفت یا در میدان های مستقل گازی در اعماق زمین یافت می شود.
+						جزء اصلی گاز طبیعی متان (CH4) است ، که ساده ترین نوع هیدروکربن است.
+					</p>
+					<p class="card-text" id="text-body-secondary">ترکیب اصلی : متان به همراه مقدار کمی
+						اتان ، پروپان و گازهای دیگر.
+						کاربرد ها : گرمایش خانه ها ، پخت و پز ، تولید برق و خوراک صنایع پتروشیمی.
+						مزیت نسبت به بقیه : هنگام سوختن ، دی اکسید کربن و آلودگی کمتری نسبت به زغال سنگ و
+						نفت تولید می کند.
+						نکته مهم : نشت متان به جو خطرناک است ، چون متان یک گاز گلخانه ای بسیار قوی است.
+						گاز طبیعی (پاک ترین سوخت فسلی) نامیده می شود ، اما همچنان در تغییرات اقلیمی نقش
+						دارد.
+					</p>
 				</div>
-				<div class="container mt-5">
-					<div class="col-lg-4">
-						<div class="w-100 bg-info">
-							<h3></h3>
-						</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="container" id="services">
+		<div class="row mt-5">
+			<div class="col-12 text-center">
+				<!-- <h3 class="title-border-min"> ساختار شیمیایی سوخت های فسیلی </h3> -->
+			</div>
+			<div class="container mt-5">
+				<div class="col-lg-4">
+					<div class="w-100 bg-info">
+						<h3></h3>
 					</div>
 				</div>
 			</div>
-	     
-				<section class="fossil-distribution-large">
+		</div>
 
-					<div class="fossil-text">
-						<h2>🗺️ پراکندگی منابع سوخت‌های فسیلی در جهان</h2>
+		<section class="fossil-distribution-large">
 
-						<p>
-							منابع سوخت‌های فسیلی به شکل یکنواخت در سطح زمین توزیع نشده‌اند. دلیل این موضوع به
-							شرایط زمین‌شناسی میلیون‌ها سال پیش برمی‌گردد. تشکیل نفت، گاز و زغال سنگ نیازمند
-							محیط‌های خاصی بوده مثل دریاهای کم‌عمق، جنگل‌های انبوه باتلاقی و حوضه‌های رسوبی عمیق
-							است. فقط در برخی مناطق جهان این شرایط به مدت طولانی فراهم بوده و به همین دلیل امروز
-							ذخایر بزرگ سوخت‌های فسیلی در نقاط مشخصی از کره زمین متمرکز شده‌اند.
-						</p>
+			<div class="fossil-text">
+				<h2>🗺️ پراکندگی منابع سوخت‌های فسیلی در جهان</h2>
 
-						<h3>چرا پراکندگی این منابع مهم است؟</h3>
-						<p>
-							نامساوی بودن توزیع سوخت‌های فسیلی باعث شده برخی کشورها صادرکننده بزرگ انرژی و برخی
-							دیگر واردکننده باشند. این موضوع روی اقتصاد، روابط بین‌الملل و حتی سیاست‌های جهانی
-							تأثیر می‌گذارد. کشورهایی که منابع داخلی کمی دارند، بیشتر به سمت صرفه‌جویی در مصرف
-							انرژی و توسعه انرژی‌های تجدیدپذیر حرکت کرده‌اند. از سوی دیگر، تمرکز زیاد این منابع
-							در چند منطقه خاص باعث رشد رقابت‌های اقتصادی و سیاسی زیادی بر سر دسترسی به آن‌ها
-							شکل گرفته است. همین مسئله نشان می‌دهد که وابستگی بیش از حد جهان به سوخت‌های فسیلی
-							فقط یک مسئله زیست‌محیطی نیست، بلکه یک موضوع مهم اقتصادی و جهانی نیز است.
-						</p>
-					</div>
+				<p>
+					منابع سوخت‌های فسیلی به شکل یکنواخت در سطح زمین توزیع نشده‌اند. دلیل این موضوع به
+					شرایط زمین‌شناسی میلیون‌ها سال پیش برمی‌گردد. تشکیل نفت، گاز و زغال سنگ نیازمند
+					محیط‌های خاصی بوده مثل دریاهای کم‌عمق، جنگل‌های انبوه باتلاقی و حوضه‌های رسوبی عمیق
+					است. فقط در برخی مناطق جهان این شرایط به مدت طولانی فراهم بوده و به همین دلیل امروز
+					ذخایر بزرگ سوخت‌های فسیلی در نقاط مشخصی از کره زمین متمرکز شده‌اند.
+				</p>
 
-                        <button class="map-button"><img src="assets/img/location dot-64.png" alt="" width="20px"><a href="map.html">نقشه</a></button>
-					<!-- <section class="fossil-map-section">
+				<h3>چرا پراکندگی این منابع مهم است؟</h3>
+				<p>
+					نامساوی بودن توزیع سوخت‌های فسیلی باعث شده برخی کشورها صادرکننده بزرگ انرژی و برخی
+					دیگر واردکننده باشند. این موضوع روی اقتصاد، روابط بین‌الملل و حتی سیاست‌های جهانی
+					تأثیر می‌گذارد. کشورهایی که منابع داخلی کمی دارند، بیشتر به سمت صرفه‌جویی در مصرف
+					انرژی و توسعه انرژی‌های تجدیدپذیر حرکت کرده‌اند. از سوی دیگر، تمرکز زیاد این منابع
+					در چند منطقه خاص باعث رشد رقابت‌های اقتصادی و سیاسی زیادی بر سر دسترسی به آن‌ها
+					شکل گرفته است. همین مسئله نشان می‌دهد که وابستگی بیش از حد جهان به سوخت‌های فسیلی
+					فقط یک مسئله زیست‌محیطی نیست، بلکه یک موضوع مهم اقتصادی و جهانی نیز است.
+				</p>
+			</div>
+
+			<button class="map-button"><img src="assets/img/location dot-64.png" alt="" width="20px"><a
+					href="map.html">نقشه</a></button>
+			<!-- <section class="fossil-map-section">
 
 						<div class="map-wrapper">
 
@@ -795,7 +812,7 @@
 
 								<img src="assets/img/naghshe.png" alt="نقشه جهان" class="world-map">
 								<نقاط تعاملی -->
-								<!-- <div class="map-point usa" data-title="آمریکا"
+			<!-- <div class="map-point usa" data-title="آمریکا"
 									data-text="نفت: زیاد | گاز طبیعی: بسیار زیاد | زغال‌سنگ: متوسط">                       	
 								</div>
 
@@ -821,196 +838,195 @@
 
 						<div class="map-tooltip" id="mapTooltip"></div>
 					</section> -->
-				</section>
-	    </div>  
-	    
-	          
-		<div class="container" id="services">
-           <section class="container-fluid" id="portfolio">
-            <div class="row" style="display:flex;">
-              <div class="col-md-6" id="user-pattern" style="max-width: 100%;">
+		</section>
+	</div>
 
-                <div class="row" id="row-id">
-                    
-                    <h3 class="mt-5 text-bold" > 📈 روند مصرف سوخت‌های فسیلی در جهان </h3>
-					<p class="text-secondary mt-3 w-100">
-						مصرف سوخت‌های فسیلی از زمان انقلاب صنعتی تا امروز مسیر رو به رشدی داشته است. با اختراع
-						ماشین‌های بخار در قرن هجدهم، زغال‌سنگ به مهم‌ترین منبع انرژی تبدیل شد. کارخانه‌ها،
-						قطارها و کشتی‌ها همگی با سوزاندن زغال‌سنگ کار می‌کردند و همین موضوع آغاز وابستگی گسترده
-						بشر به سوخت‌های فسیلی بود.
-					</p>
-					<h3 class="mt-5 text-bold"> 🌍 وضعیت امروز </h3>
-					<p class="text-secondary mt-3 w-100">
-						امروزه بخش بزرگی از انرژی جهان هنوز از سوخت‌های فسیلی تأمین می‌شود. با وجود پیشرفت
-						انرژی‌های تجدیدپذیر، نفت، گاز و زغال‌سنگ همچنان نقش اصلی را در حمل‌ونقل، صنعت و تولید
-						برق دارند. کشورهای در حال توسعه به دلیل رشد جمعیت و صنعت، مصرف انرژی بالاتری پیدا
-						کرده‌اند و این موضوع باعث شده مصرف جهانی همچنان بالا بماند.
-					</p>
-					<h3 class="mt-5 text-bold"> ⏳ آینده مصرف سوخت‌های فسیلی </h3>
-					<p class="text-secondary mt-3 w-100">
-                                دانشمندان پیش‌بینی می‌کنند اگر روند فعلی مصرف ادامه پیدا کند:
-                                ذخایر زغال‌سنگ دیرتر تمام می‌شوند اما آلودگی زیادی ایجاد می‌کنند
-                                نفت در چند دهه آینده با کاهش ذخایر روبه‌رو می‌شود
-                                گاز طبیعی ممکن است برای مدت طولانی‌تری در دسترس باشد
-                                با این حال، نگرانی اصلی فقط تمام شدن منابع نیست، بلکه آسیب‌های زیست‌محیطی ناشی از مصرف
-                                آن‌هاست. به همین دلیل بسیاری از کشورها در حال سرمایه‌گذاری روی انرژی‌های تجدیدپذیر مثل
-                                خورشیدی و بادی هستند تا وابستگی به سوخت‌های فسیلی را کاهش دهند.
-                            </p>
-                    
-                </div>
-                
-                
-              </div>
-              <div class="col-md-6 px-0" id="row-id2">
-                <img src="./assets/img/nemoodar.jpg" width="400px" height="500px" class="img-fluid">
-              </div>
-              <div class="col-lg-1"></div>
-            </div>
-           </section>
-     	</div> 
-       
-        <div class="container" id="services">
-			<div class="container-fluid">
-				<div class="row">
-					<!-- Image 1 -->
-					<div class="col-md-4 col-sm-6 p-0">
-						<div class="gallery-box position-relative overflow-hidden">
-							<img src="assets/img/1.jpg" class=" w-100 gallery-img" alt="Gallery 1" id="img-box">
-							<div class="overlay d-flex justify-content-center align-items-center">
-								<div class="overlay-text text-white text-center">
-									<h5> تعریف سوخت های فسیلی </h5>
-									<p> سوخت های فسیلی ، منابع انرژی هستند که از تجزیه مواد آلی در زمین طی
-										میلیون ها سال به وجود آمده اند. این منابع شامل نفت ، گاز طبیعی و زغال
-										سنگ می باشند. </p>
-								</div>
+
+	<div class="container" id="services">
+		<section class="container-fluid" id="portfolio">
+			<div class="row" style="display:flex;">
+				<div class="col-md-6" id="user-pattern" style="max-width: 100%;">
+
+					<div class="row" id="row-id">
+
+						<h3 class="mt-5 text-bold"> 📈 روند مصرف سوخت‌های فسیلی در جهان </h3>
+						<p class="text-secondary mt-3 w-100">
+							مصرف سوخت‌های فسیلی از زمان انقلاب صنعتی تا امروز مسیر رو به رشدی داشته است. با اختراع
+							ماشین‌های بخار در قرن هجدهم، زغال‌سنگ به مهم‌ترین منبع انرژی تبدیل شد. کارخانه‌ها،
+							قطارها و کشتی‌ها همگی با سوزاندن زغال‌سنگ کار می‌کردند و همین موضوع آغاز وابستگی گسترده
+							بشر به سوخت‌های فسیلی بود.
+						</p>
+						<h3 class="mt-5 text-bold"> 🌍 وضعیت امروز </h3>
+						<p class="text-secondary mt-3 w-100">
+							امروزه بخش بزرگی از انرژی جهان هنوز از سوخت‌های فسیلی تأمین می‌شود. با وجود پیشرفت
+							انرژی‌های تجدیدپذیر، نفت، گاز و زغال‌سنگ همچنان نقش اصلی را در حمل‌ونقل، صنعت و تولید
+							برق دارند. کشورهای در حال توسعه به دلیل رشد جمعیت و صنعت، مصرف انرژی بالاتری پیدا
+							کرده‌اند و این موضوع باعث شده مصرف جهانی همچنان بالا بماند.
+						</p>
+						<h3 class="mt-5 text-bold"> ⏳ آینده مصرف سوخت‌های فسیلی </h3>
+						<p class="text-secondary mt-3 w-100">
+							دانشمندان پیش‌بینی می‌کنند اگر روند فعلی مصرف ادامه پیدا کند:
+							ذخایر زغال‌سنگ دیرتر تمام می‌شوند اما آلودگی زیادی ایجاد می‌کنند
+							نفت در چند دهه آینده با کاهش ذخایر روبه‌رو می‌شود
+							گاز طبیعی ممکن است برای مدت طولانی‌تری در دسترس باشد
+							با این حال، نگرانی اصلی فقط تمام شدن منابع نیست، بلکه آسیب‌های زیست‌محیطی ناشی از مصرف
+							آن‌هاست. به همین دلیل بسیاری از کشورها در حال سرمایه‌گذاری روی انرژی‌های تجدیدپذیر مثل
+							خورشیدی و بادی هستند تا وابستگی به سوخت‌های فسیلی را کاهش دهند.
+						</p>
+
+					</div>
+
+
+				</div>
+				<div class="col-md-6 px-0" id="row-id2">
+					<img src="./assets/img/nemoodar.jpg" width="400px" height="500px" class="img-fluid">
+				</div>
+				<div class="col-lg-1"></div>
+			</div>
+		</section>
+	</div>
+
+	<div class="container" id="services">
+		<div class="container-fluid">
+			<div class="row">
+				<!-- Image 1 -->
+				<div class="col-md-4 col-sm-6 p-0">
+					<div class="gallery-box position-relative overflow-hidden">
+						<img src="assets/img/1.jpg" class=" w-100 gallery-img" alt="Gallery 1" id="img-box">
+						<div class="overlay d-flex justify-content-center align-items-center">
+							<div class="overlay-text text-white text-center">
+								<h5> تعریف سوخت های فسیلی </h5>
+								<p> سوخت های فسیلی ، منابع انرژی هستند که از تجزیه مواد آلی در زمین طی
+									میلیون ها سال به وجود آمده اند. این منابع شامل نفت ، گاز طبیعی و زغال
+									سنگ می باشند. </p>
 							</div>
 						</div>
 					</div>
-					<!-- Image 2 -->
-					<div class="col-md-4 col-sm-6 p-0">
-						<div class="gallery-box position-relative overflow-hidden">
-							<img src="assets/img/2.jpg" class=" w-100 gallery-img" alt="Gallery 1" id="img-box">
-							<div class="overlay d-flex justify-content-center align-items-center">
-								<div class="overlay-text text-white text-center">
-									<h5> مزایای سوخت های فسیلی</h5>
-									<p> سوخت های فسیلی انرژی بالا و هزینه تولید پایین دارند. به راحتی در صنایع
-										مختلف استفاده می شوند و زیر ساخت های قوی برای استخراج و انتقال آنها وجود
-										دارد.</p>
-								</div>
+				</div>
+				<!-- Image 2 -->
+				<div class="col-md-4 col-sm-6 p-0">
+					<div class="gallery-box position-relative overflow-hidden">
+						<img src="assets/img/2.jpg" class=" w-100 gallery-img" alt="Gallery 1" id="img-box">
+						<div class="overlay d-flex justify-content-center align-items-center">
+							<div class="overlay-text text-white text-center">
+								<h5> مزایای سوخت های فسیلی</h5>
+								<p> سوخت های فسیلی انرژی بالا و هزینه تولید پایین دارند. به راحتی در صنایع
+									مختلف استفاده می شوند و زیر ساخت های قوی برای استخراج و انتقال آنها وجود
+									دارد.</p>
 							</div>
 						</div>
 					</div>
-					<!-- Image 3 -->
-					<div class="col-md-4 col-sm-6 p-0">
-						<div class="gallery-box position-relative overflow-hidden">
-							<img src="assets/img/3.jpg" class=" gallery-img" alt="Gallery 1" id="img-box">
-							<div class="overlay d-flex justify-content-center align-items-center">
-								<div class="overlay-text text-white text-center">
-									<h5> معایب سوخت های فسیلی</h5>
-									<p> استفاده از سوخت های فسیلی باعث آلودگی هوا ، گرم شدن جهانی و کاهش منابع
-										طبیعی می شود. این عوارض زیان بار می توانند به محیط زیست آسیب برسانند.
-									</p>
-								</div>
+				</div>
+				<!-- Image 3 -->
+				<div class="col-md-4 col-sm-6 p-0">
+					<div class="gallery-box position-relative overflow-hidden">
+						<img src="assets/img/3.jpg" class=" gallery-img" alt="Gallery 1" id="img-box">
+						<div class="overlay d-flex justify-content-center align-items-center">
+							<div class="overlay-text text-white text-center">
+								<h5> معایب سوخت های فسیلی</h5>
+								<p> استفاده از سوخت های فسیلی باعث آلودگی هوا ، گرم شدن جهانی و کاهش منابع
+									طبیعی می شود. این عوارض زیان بار می توانند به محیط زیست آسیب برسانند.
+								</p>
 							</div>
 						</div>
 					</div>
-					<!-- Image 4 -->
-					<div class="col-md-4 col-sm-6 p-0">
-						<div class="gallery-box position-relative overflow-hidden">
-							<img src="assets/img/4.jpg" class="w-100 gallery-img" alt="Gallery 1" id="img-box">
-							<div class="overlay d-flex justify-content-center align-items-center">
-								<div class="overlay-text text-white text-center">
-									<h5> تاثیرات زیست محیطی </h5>
-									<p> سوزاندن سوخت های فسیلی گاز های گلخانه ای تولید می کند که باعث تغییرات
-										اقلیمی و اثرات مخرب بر اکوسیستم ها می شود.</p>
-								</div>
+				</div>
+				<!-- Image 4 -->
+				<div class="col-md-4 col-sm-6 p-0">
+					<div class="gallery-box position-relative overflow-hidden">
+						<img src="assets/img/4.jpg" class="w-100 gallery-img" alt="Gallery 1" id="img-box">
+						<div class="overlay d-flex justify-content-center align-items-center">
+							<div class="overlay-text text-white text-center">
+								<h5> تاثیرات زیست محیطی </h5>
+								<p> سوزاندن سوخت های فسیلی گاز های گلخانه ای تولید می کند که باعث تغییرات
+									اقلیمی و اثرات مخرب بر اکوسیستم ها می شود.</p>
 							</div>
 						</div>
 					</div>
-					<!-- Image 5 -->
-					<div class="col-md-4 col-sm-6 p-0">
-						<div class="gallery-box position-relative overflow-hidden">
-							<img src="assets/img/5.jpg" class="gallery-img4" alt="Gallery 1" id="img-box">
-							<div class="overlay d-flex justify-content-center align-items-center">
-								<div class="overlay-text text-white text-center">
-									<h5> جایگزین های پاک</h5>
-									<p> انرژی های تجدید پذیر مانند خورشیدی ، بادی و هیدروژنی به عنوان جایگزین
-										های پاک سوخت های فسیلی مطرح شده اند. این منابع به حفظ محیط زیست کمک می
-										کنند.</p>
-								</div>
+				</div>
+				<!-- Image 5 -->
+				<div class="col-md-4 col-sm-6 p-0">
+					<div class="gallery-box position-relative overflow-hidden">
+						<img src="assets/img/5.jpg" class="gallery-img4" alt="Gallery 1" id="img-box">
+						<div class="overlay d-flex justify-content-center align-items-center">
+							<div class="overlay-text text-white text-center">
+								<h5> جایگزین های پاک</h5>
+								<p> انرژی های تجدید پذیر مانند خورشیدی ، بادی و هیدروژنی به عنوان جایگزین
+									های پاک سوخت های فسیلی مطرح شده اند. این منابع به حفظ محیط زیست کمک می
+									کنند.</p>
 							</div>
 						</div>
 					</div>
-					<!-- Image 6 -->
-					<div class="col-md-4 col-sm-6 p-0">
-						<div class="gallery-box position-relative overflow-hidden">
-							<img src="assets/img/6.jpg" class="w-auto gallery-img5" alt="Gallery 1"
-								id="img-box">
-							<div class="overlay d-flex justify-content-center align-items-center">
-								<div class="overlay-text text-white text-center">
-									<h5> آینده سوخت های فسیلی </h5>
-									<p> باتوجه به چالش های زیست محیطی ، آینده سوخت های فسیلی به سمت کاهش مصرف و
-										انتقال به انرژی های پایدار پیش می رود. تغییرات در سیاست ها و فناوری می
-										تواند این رنود را تسریع کند.</p>
-								</div>
+				</div>
+				<!-- Image 6 -->
+				<div class="col-md-4 col-sm-6 p-0">
+					<div class="gallery-box position-relative overflow-hidden">
+						<img src="assets/img/6.jpg" class="w-auto gallery-img5" alt="Gallery 1" id="img-box">
+						<div class="overlay d-flex justify-content-center align-items-center">
+							<div class="overlay-text text-white text-center">
+								<h5> آینده سوخت های فسیلی </h5>
+								<p> باتوجه به چالش های زیست محیطی ، آینده سوخت های فسیلی به سمت کاهش مصرف و
+									انتقال به انرژی های پایدار پیش می رود. تغییرات در سیاست ها و فناوری می
+									تواند این رنود را تسریع کند.</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-	     </div>
+		</div>
+	</div>
 
 
-		<script>
-			const tooltip = document.getElementById("mapTooltip");
-			const points = document.querySelectorAll(".map-point");
+	<script>
+		const tooltip = document.getElementById("mapTooltip");
+		const points = document.querySelectorAll(".map-point");
 
-			points.forEach(point => {
-				point.addEventListener("mouseenter", () => {
-					tooltip.style.display = "block";
-					tooltip.innerHTML =
-						"<strong>" + point.dataset.title + "</strong><br>" +
-						point.dataset.text;
-				});
-
-				point.addEventListener("mousemove", (e) => {
-					tooltip.style.left = e.pageX + 15 + "px";
-					tooltip.style.top = e.pageY + 15 + "px";
-				});
-
-				point.addEventListener("mouseleave", () => {
-					tooltip.style.display = "none";
-				});
+		points.forEach(point => {
+			point.addEventListener("mouseenter", () => {
+				tooltip.style.display = "block";
+				tooltip.innerHTML =
+					"<strong>" + point.dataset.title + "</strong><br>" +
+					point.dataset.text;
 			});
-		</script>
-        <!-- <div class="col-lg-1"></div> -->   
-     
-            
-  <div class="scroll-buttons">
-    <img src="assets/ico/arrow up.svg" alt="Scroll Up" id="scrollUp">
-    <img src="assets/ico/arrow down.svg" alt="Scroll Down" id="scrollDown">
-  </div>
-  
+
+			point.addEventListener("mousemove", (e) => {
+				tooltip.style.left = e.pageX + 15 + "px";
+				tooltip.style.top = e.pageY + 15 + "px";
+			});
+
+			point.addEventListener("mouseleave", () => {
+				tooltip.style.display = "none";
+			});
+		});
+	</script>
+	<!-- <div class="col-lg-1"></div> -->
+
+
+	<div class="scroll-buttons">
+		<img src="assets/ico/arrow up.svg" alt="Scroll Up" id="scrollUp">
+		<img src="assets/ico/arrow down.svg" alt="Scroll Down" id="scrollDown">
+	</div>
 
 
 
-  
-  <script>
-    document.getElementById("scrollUp").addEventListener("click", function () {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    });
-  
-    document.getElementById("scrollDown").addEventListener("click", function () {
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth"
-      });
-    });
-  </script>
-<footer>
+
+
+	<script>
+		document.getElementById("scrollUp").addEventListener("click", function () {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			});
+		});
+
+		document.getElementById("scrollDown").addEventListener("click", function () {
+			window.scrollTo({
+				top: document.body.scrollHeight,
+				behavior: "smooth"
+			});
+		});
+	</script>
+	<footer>
 		<div class="container-fluid bg-dark px-0 mt-5">
 			<div class="row mx-0" id="mx-0-foot">
 				<div class="col-lg-1 mt-5 form-footer">
@@ -1020,12 +1036,13 @@
 					<div class="row">
 						<h2 class="text-bold text-white"> انرژی آینده</h2>
 						<p class="text-white fs-6 mt-3">
-							این وب‌ سایت یک پروژه آموزشی درباره سوخت‌ های فسیلی، چالش‌ ها و راهکار های انرژی‌ های پاک است
+							این وب‌ سایت یک پروژه آموزشی درباره سوخت‌ های فسیلی، چالش‌ ها و راهکار های انرژی‌ های پاک
+							است
 							که
 							توسط آندیا شیردلان و یگانه رجایی ،
 							<br>
 							<br>
-							 دانش‌آموزان کلاس یازدهم رشته شبکه و نرم‌افزار، برای
+							دانش‌آموزان کلاس یازدهم رشته شبکه و نرم‌افزار، برای
 							مسابقه طراحی سایت
 							ایجاد شده است.
 						</p>
@@ -1045,10 +1062,11 @@
 						</div>
 						<div class="card">
 							<div class="card-body">
-								<p>این پروژه تحت راهنمایی ارزشمند <strong>سرکار خانم کشمیری    </strong>،
-									دبیر محترم [ درس پیاده سازی سیستم های اطلاعاتی و طراحی وب ] 
+								<p>این پروژه تحت راهنمایی ارزشمند <strong>سرکار خانم کشمیری </strong>،
+									دبیر محترم [ درس پیاده سازی سیستم های اطلاعاتی و طراحی وب ]
 									<br>
-									طراحی و اجرا شده است.</p>
+									طراحی و اجرا شده است.
+								</p>
 								<p>از زحمات و راهنمایی‌ های ایشان صمیمانه سپاسگزاریم.</p>
 							</div>
 						</div>
@@ -1063,14 +1081,14 @@
 				</div>
 				<div class="col-lg-2 px-0"></div>
 			</div>
-            </div>
-        </footer>
+		</div>
+	</footer>
 
-<script src="assets/bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/theme.js"></script>
+	<script src="assets/bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/theme.js"></script>
 
-<script src="assets/js/oghat.js"></script>
-<!-- <script> document.body.classList.add('dark-mode')
+	<script src="assets/js/oghat.js"></script>
+	<!-- <script> document.body.classList.add('dark-mode')
     document.body.classList.remove('dark-mode')
 </script> -->
 
